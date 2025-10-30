@@ -4,22 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e0a92a13054c0232",
+        "id": "54eaa1ca037d7591",
         "type": "tabs",
         "children": [
           {
-            "id": "06f1dc2e2eb5f4f1",
+            "id": "19e2fdd77d43e416",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "github令牌.md",
+                "file": "PythonDoc/python自带函数库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "github令牌"
+              "title": "python自带函数库"
             }
           }
         ]
@@ -34,7 +34,7 @@
       {
         "id": "6cf622418ff295ea",
         "type": "tabs",
-        "dimension": 63.373493975903614,
+        "dimension": 53.73134328358209,
         "children": [
           {
             "id": "4faf76b4eeb30af4",
@@ -54,7 +54,7 @@
       {
         "id": "d37ca736577533ab",
         "type": "tabs",
-        "dimension": 36.626506024096386,
+        "dimension": 46.26865671641791,
         "children": [
           {
             "id": "763ec6907a77a575",
@@ -86,10 +86,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#pythondoc",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -136,16 +136,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/流畅的Python.md",
+                "file": "PythonDoc/python自带函数库.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "流畅的Python 的大纲"
+              "title": "python自带函数库 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "a886ebb5fa7a0bbd",
@@ -184,11 +185,20 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "06f1dc2e2eb5f4f1",
+  "active": "19e2fdd77d43e416",
   "lastOpenFiles": [
-    "python,projects,ai/流畅的Python.md",
     "github令牌.md",
-    "python,projects,ai/NamedTuple.md",
+    "PythonDoc/typing库.md",
+    "PythonDoc/collections库.md",
+    "PythonDoc/random库.md",
+    "PythonDoc/python自带函数库.md",
+    "PythonDoc/NamedTuple.md",
+    "python,projects,ai/流畅的Python/流畅的Python.md",
+    "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
+    "python,projects,ai/流畅的Python",
+    "PythonDoc",
+    "未命名.md",
+    "attachments/一摞python风格的纸牌.py",
     "未命名.canvas",
     "欢迎.md",
     "python,projects,ai",

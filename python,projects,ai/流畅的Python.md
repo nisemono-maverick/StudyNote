@@ -1,2 +1,0 @@
-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
-[[NamedTuple]]
