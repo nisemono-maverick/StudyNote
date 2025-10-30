@@ -1,0 +1,10 @@
+{
+  "cssTheme": "GitHub Theme",
+  "theme": "system",
+  "baseFontSize": 18,
+  "baseFontSizeAction": true,
+  "interfaceFontFamily": "JetBrainsMono Nerd Font",
+  "textFontFamily": "JetBrainsMono Nerd Font",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
+  "accentColor": "#719fb7"
+}

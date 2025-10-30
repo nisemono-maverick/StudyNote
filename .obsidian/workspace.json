@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "6666cc28fc8e24d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0a92a13054c0232",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06f1dc2e2eb5f4f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "github令牌.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "github令牌"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6c92e0f9aa952ca2",
+    "type": "split",
+    "children": [
+      {
+        "id": "6cf622418ff295ea",
+        "type": "tabs",
+        "dimension": 63.373493975903614,
+        "children": [
+          {
+            "id": "4faf76b4eeb30af4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          }
+        ]
+      },
+      {
+        "id": "d37ca736577533ab",
+        "type": "tabs",
+        "dimension": 36.626506024096386,
+        "children": [
+          {
+            "id": "763ec6907a77a575",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 266.5026054382324
+  },
+  "right": {
+    "id": "df7c7a838a0ea4e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "90e075932855bde2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a40ef328d0c773c0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "8fdc1191d7e453cc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "obsidian配置.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "obsidian配置 的反向链接列表"
+            }
+          },
+          {
+            "id": "ac29bef530d55506",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "python,projects,ai/流畅的Python.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "流畅的Python 的出链列表"
+            }
+          },
+          {
+            "id": "91e27276987e43e1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "python,projects,ai/流畅的Python.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "流畅的Python 的大纲"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a886ebb5fa7a0bbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2bc1d680b9a59137",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:创建新数据库": false
+    }
+  },
+  "active": "06f1dc2e2eb5f4f1",
+  "lastOpenFiles": [
+    "python,projects,ai/流畅的Python.md",
+    "github令牌.md",
+    "python,projects,ai/NamedTuple.md",
+    "未命名.canvas",
+    "欢迎.md",
+    "python,projects,ai",
+    "obsidian配置.md",
+    "attachments"
+  ]
+}
