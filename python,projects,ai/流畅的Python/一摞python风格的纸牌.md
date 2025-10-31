@@ -101,3 +101,121 @@ print(Card('Q', 'hearts') in deck)  # 输出: True
 ```
 
 ### `__contains__` 方法
+
+#### 概述
+
+虽然实现了 `__getitem__` 就自动获得了 `in` 操作符的支持，但 `__contains__` 方法提供了更高效、更可控的成员关系测试方式。
+
+#### `__getitem__` 实现 in 的机制
+- Python 会从索引 0 开始迭代
+- 逐个调用 `__getitem__(i)` 直到找到匹配项或抛出 `IndexError`
+- **时间复杂度**：O(n) 线性搜索
+
+#### 专门优化：`__contains__` 方法
+
+##### 基本实现
+```python
+class FrenchDeck:
+    def __contains__(self, card):
+        # 自定义的高效查找逻辑
+        return any(c.rank == card.rank and c.suit == card.suit 
+                  for c in self._cards)
+```
+
+##### 更高效的实现
+```python
+class OptimizedFrenchDeck:
+    def __init__(self):
+        self._cards = [Card(rank, suit) for suit in self.suits for rank in self.ranks]
+        self._card_set = set(self._cards)  # 预计算集合
+    
+    def __contains__(self, card):
+        return card in self._card_set  # O(1) 时间复杂度
+```
+
+## 性能对比
+
+```python
+import time
+
+# 测试 __getitem__ 的 in 操作
+start = time.time()
+result1 = Card('K', 'spades') in deck_via_getitem  # 线性搜索
+time1 = time.time() - start
+
+# 测试 __contains__ 的 in 操作  
+start = time.time()
+result2 = Card('K', 'spades') in deck_via_contains  # 哈希查找
+time2 = time.time() - start
+
+print(f"__getitem__: {time1:.6f}s")   # __getitem__: 0.000062s
+print(f"__contains__: {time2:.6f}s")  # __contains__: 0.000012s
+```
+
+#### 使用场景对比
+
+##### 适合使用 `__getitem__` + 默认 in：
+- 数据量小（< 1000 元素）
+- 不需要频繁的成员检查
+- 追求代码简洁性
+- 数据结构本身不支持高效查找
+
+##### 适合实现 `__contains__`：
+- 数据量大
+- 频繁进行成员关系测试
+- 数据结构支持高效查找（集合、字典等）
+- 需要自定义匹配逻辑
+
+#### 实际应用示例
+
+##### 案例1：范围检查
+```python
+class TemperatureRange:
+    def __init__(self, min_temp, max_temp):
+        self.min = min_temp
+        self.max = max_temp
+    
+    def __contains__(self, temperature):
+        return self.min <= temperature <= self.max
+
+temp_range = TemperatureRange(0, 100)
+print(50 in temp_range)  # True
+print(150 in temp_range)  # False
+```
+
+##### 案例2：模式匹配
+```python
+class TextPattern:
+    def __init__(self, patterns):
+        self.patterns = patterns
+    
+    def __contains__(self, text):
+        return any(pattern in text for pattern in self.patterns)
+
+pattern_checker = TextPattern(['error', 'warning', 'critical'])
+log_message = "System encountered an error"
+print(log_message in pattern_checker)  # True
+```
+
+##### 案例3：复杂对象查找
+```python
+class StudentRoster:
+    def __init__(self, students):
+        self.students = students
+        self._id_index = {s.id: s for s in students}  # 建立索引
+    
+    def __contains__(self, item):
+        if isinstance(item, Student):
+            return item.id in self._id_index
+        elif isinstance(item, str):  # 按姓名查找
+            return any(s.name == item for s in self.students)
+        elif isinstance(item, int):  # 按ID查找
+            return item in self._id_index
+        return False
+```
+
+#### 优先级规则
+
+**执行顺序**：
+1. 先检查是否实现了 `__contains__`
+2. 如果未实现，回退到 `__getitem__` + 迭代

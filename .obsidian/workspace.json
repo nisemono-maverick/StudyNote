@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PythonDoc/python自带函数库.md",
+                "file": "PythonDoc/typing库.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "python自带函数库"
+              "title": "typing库"
             }
           }
         ]
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obsidian配置.md",
+                "file": "PythonDoc/typing库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "obsidian配置 的反向链接列表"
+              "title": "typing库 的反向链接列表"
             }
           },
           {
@@ -122,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python,projects,ai/流畅的Python.md",
+                "file": "PythonDoc/typing库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "流畅的Python 的出链列表"
+              "title": "typing库 的出链列表"
             }
           },
           {
@@ -136,17 +136,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PythonDoc/python自带函数库.md",
+                "file": "PythonDoc/typing库.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "python自带函数库 的大纲"
+              "title": "typing库 的大纲"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "a886ebb5fa7a0bbd",
@@ -175,26 +175,27 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "bases:创建新数据库": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "19e2fdd77d43e416",
   "lastOpenFiles": [
-    "github令牌.md",
-    "PythonDoc/typing库.md",
     "PythonDoc/collections库.md",
-    "PythonDoc/random库.md",
+    "PythonDoc/typing库.md",
     "PythonDoc/python自带函数库.md",
+    "PythonDoc/random库.md",
+    "PythonDoc/random.choice.md",
+    "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
+    "github令牌.md",
     "PythonDoc/NamedTuple.md",
     "python,projects,ai/流畅的Python/流畅的Python.md",
-    "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
     "python,projects,ai/流畅的Python",
     "PythonDoc",
     "未命名.md",
