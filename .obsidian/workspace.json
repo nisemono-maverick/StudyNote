@@ -8,21 +8,37 @@
         "type": "tabs",
         "children": [
           {
-            "id": "19e2fdd77d43e416",
+            "id": "53a87b24e74ab7e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PythonDoc/typing库.md",
+                "file": "python,projects,ai/ollama/Ollama 文档学习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "typing库"
+              "title": "Ollama 文档学习"
+            }
+          },
+          {
+            "id": "a5fc24bd3e3a7c0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "流畅的Python"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#pythondoc",
+                "query": "tag:#python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -103,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PythonDoc/typing库.md",
+                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +129,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "typing库 的反向链接列表"
+              "title": "流畅的Python 的反向链接列表"
             }
           },
           {
@@ -136,17 +152,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PythonDoc/typing库.md",
+                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "typing库 的大纲"
+              "title": "流畅的Python 的大纲"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "a886ebb5fa7a0bbd",
@@ -185,17 +201,24 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "19e2fdd77d43e416",
+  "active": "a5fc24bd3e3a7c0e",
   "lastOpenFiles": [
+    "python,projects,ai/ollama/Ollama 文档学习.md",
+    "python,projects,ai/ollama/Ollama 快速入门笔记.md",
+    "PythonDoc/Python 类变量、类方法与静态方法详解.md",
+    "PythonDoc/python进阶.md",
+    "python,projects,ai/流畅的Python/流畅的Python.md",
     "PythonDoc/collections库.md",
-    "PythonDoc/typing库.md",
     "PythonDoc/python自带函数库.md",
     "PythonDoc/random库.md",
-    "PythonDoc/random.choice.md",
+    "PythonDoc/typing库.md",
+    "PythonDoc/NamedTuple.md",
+    "python,projects,ai/ollama/Ollama 流式传输.md",
     "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
     "github令牌.md",
-    "PythonDoc/NamedTuple.md",
-    "python,projects,ai/流畅的Python/流畅的Python.md",
+    "python,projects,ai/ollama",
+    "python,projects,ai/未命名.md",
+    "PythonDoc/random.choice.md",
     "python,projects,ai/流畅的Python",
     "PythonDoc",
     "未命名.md",

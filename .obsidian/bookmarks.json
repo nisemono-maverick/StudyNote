@@ -6,6 +6,11 @@
       "items": [
         {
           "type": "file",
+          "ctime": 1762009421540,
+          "path": "PythonDoc/python进阶.md"
+        },
+        {
+          "type": "file",
           "ctime": 1761840746115,
           "path": "PythonDoc/collections库.md"
         },
@@ -26,6 +31,23 @@
         }
       ],
       "title": "PythonDoc"
+    },
+    {
+      "type": "group",
+      "ctime": 1761990495739,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1761990567394,
+          "path": "python,projects,ai/ollama/Ollama 文档学习.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1761990514038,
+          "path": "python,projects,ai/流畅的Python/流畅的Python.md"
+        }
+      ],
+      "title": "Study"
     }
   ]
 }
