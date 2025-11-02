@@ -133,7 +133,7 @@ class OptimizedFrenchDeck:
         return card in self._card_set  # O(1) 时间复杂度
 ```
 
-## 性能对比
+#### 性能对比
 
 ```python
 import time
@@ -219,3 +219,50 @@ class StudentRoster:
 **执行顺序**：
 1. 先检查是否实现了 `__contains__`
 2. 如果未实现，回退到 `__getitem__` + 迭代
+
+
+### sorted() 方法与自定义排序
+
+#### 基本概念
+
+`sorted()` 函数可以对任何可迭代对象进行排序，通过 `key` 参数指定自定义排序规则。
+
+#### 扑克牌排序示例
+
+```python
+# 定义花色权重字典
+suit_values = dict(spades=3, hearts=2, diamonds=1, clubs=0)
+
+def spades_high(card):
+    """自定义排序函数：计算每张牌的权重值"""
+    # 获取牌面值的索引（2=0, 3=1, ..., A=12）
+    rank_value = FrenchDeck.ranks.index(card.rank)
+    # 计算总权重：牌面值 × 4 + 花色权重
+    return rank_value * len(suit_values) + suit_values[card.suit]
+
+# 按自定义规则排序并遍历
+for card in sorted(deck, key=spades_high):
+    print(card)
+```
+
+#### 排序逻辑解析
+
+##### 权重计算公式
+```
+总权重 = 牌面值索引 × 4 + 花色权重
+```
+
+##### 排序效果
+- **先按牌面值排序**：2 < 3 < ... < K < A
+- **同牌面值按花色排序**：clubs(0) < diamonds(1) < hearts(2) < spades(3)
+
+##### 示例计算
+- 梅花2：`0 × 4 + 0 = 0`（最小）
+- 黑桃A：`12 × 4 + 3 = 51`（最大）
+
+#### 核心要点
+
+- `key` 参数接受一个函数，该函数为每个元素返回用于比较的值
+- 自定义排序函数使得复杂对象的排序变得简单
+- 这种方法适用于任何需要特定排序规则的场景
+
