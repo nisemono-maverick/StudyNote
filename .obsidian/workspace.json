@@ -8,33 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a5fc24bd3e3a7c0e",
+            "id": "feafbc93e411adbd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
+                "file": "PythonDoc/python进阶.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "流畅的Python"
-            }
-          },
-          {
-            "id": "49d8394cfd8a37d7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "一摞python风格的纸牌"
+              "title": "python进阶"
             }
           }
         ]
@@ -151,13 +136,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
+                "file": "PythonDoc/python进阶.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "流畅的Python 的大纲"
+              "title": "python进阶 的大纲"
             }
           }
         ],
@@ -200,13 +185,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a5fc24bd3e3a7c0e",
+  "active": "feafbc93e411adbd",
   "lastOpenFiles": [
     "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
-    "python,projects,ai/流畅的Python/流畅的Python.md",
-    "python,projects,ai/ollama/Ollama 文档学习.md",
     "PythonDoc/python进阶.md",
+    "python,projects,ai/流畅的Python/流畅的Python.md",
+    "PythonDoc/Python 生成器.md",
     "PythonDoc/Python 推导式.md",
+    "python,projects,ai/ollama/Ollama 文档学习.md",
     "python,projects,ai/ollama/Ollama 快速入门笔记.md",
     "PythonDoc/Python 类变量、类方法与静态方法详解.md",
     "PythonDoc/collections库.md",
