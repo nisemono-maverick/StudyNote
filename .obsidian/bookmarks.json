@@ -11,23 +11,8 @@
         },
         {
           "type": "file",
-          "ctime": 1761840746115,
-          "path": "PythonDoc/collections库.md"
-        },
-        {
-          "type": "file",
           "ctime": 1761840757807,
-          "path": "PythonDoc/python自带函数库.md"
-        },
-        {
-          "type": "file",
-          "ctime": 1761840765931,
-          "path": "PythonDoc/random库.md"
-        },
-        {
-          "type": "file",
-          "ctime": 1761882898623,
-          "path": "PythonDoc/typing库.md"
+          "path": "PythonDoc/python常用库.md"
         }
       ],
       "title": "PythonDoc"
