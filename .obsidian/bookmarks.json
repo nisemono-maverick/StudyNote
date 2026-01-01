@@ -38,6 +38,11 @@
         }
       ],
       "title": "Study"
+    },
+    {
+      "type": "folder",
+      "ctime": 1767200087142,
+      "path": "csdiy/cs61b"
     }
   ]
 }

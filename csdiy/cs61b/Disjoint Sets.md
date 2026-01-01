@@ -1,0 +1,3 @@
+- Disjoint Sets 实现 2 个操作
+	- `connect(x,y)`
+	- `isConnected(x,y)`
