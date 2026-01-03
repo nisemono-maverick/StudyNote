@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "csdiy/cs61b/Lecture/ADTs, BSTs.md",
+                "file": "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "ADTs, BSTs"
+              "title": "BSTs（Binary Search Trees）"
             }
           },
           {
@@ -116,7 +116,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5026054382324
+    "width": 266.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "df7c7a838a0ea4e4",
@@ -182,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Lecture/ADTs, BSTs.md",
+                "file": "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ADTs, BSTs 的大纲"
+              "title": "BSTs（Binary Search Trees） 的大纲"
             }
           },
           {
@@ -244,7 +245,7 @@
   "active": "46139b829c29ab67",
   "lastOpenFiles": [
     "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
-    "csdiy/cs61b/Lecture/ADTs, BSTs.md",
+    "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
     "PythonDoc/python进阶.md",
     "PythonDoc/使用 tqdm 为 Python 应用添加进度条.md",
     "github令牌.md",
