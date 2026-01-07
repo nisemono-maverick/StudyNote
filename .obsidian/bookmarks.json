@@ -40,9 +40,10 @@
       "title": "Study"
     },
     {
-      "type": "folder",
-      "ctime": 1767200087142,
-      "path": "csdiy/cs61b"
+      "type": "file",
+      "ctime": 1767769735903,
+      "path": "csdiy/cs61b/Lecture/index.md",
+      "title": "cs61b课程目录"
     }
   ]
 }
