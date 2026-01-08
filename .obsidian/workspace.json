@@ -113,7 +113,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -286,10 +286,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d2fa7dad3f0cf961",
+  "active": "c0cc2777575b2d8b",
   "lastOpenFiles": [
-    "csdiy/cs61b/Lecture/Red Black Trees.md",
     "github令牌.md",
+    "csdiy/cs61b/Lecture/Red Black Trees.md",
     "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
     "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
     "csdiy/cs61b/Lecture/Hashing.md",
