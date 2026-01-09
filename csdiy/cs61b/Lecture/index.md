@@ -3,3 +3,4 @@
 [[B-Trees（2-3 2-3-4 Trees）]]
 [[Red Black Trees]]
 [[Hashing]]
+[[Heaps]]
