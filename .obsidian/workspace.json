@@ -8,6 +8,36 @@
         "type": "tabs",
         "children": [
           {
+            "id": "a39b9dee18adbb21",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "B-Trees（2-3 2-3-4 Trees）"
+            }
+          },
+          {
+            "id": "ff9c0247a6b8a348",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "csdiy/cs61b/Lecture/Red Black Trees.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Red Black Trees"
+            }
+          },
+          {
             "id": "35b889cbb7b6afe3",
             "type": "leaf",
             "state": {
@@ -23,21 +53,22 @@
             }
           },
           {
-            "id": "42d05e228beb9d65",
+            "id": "c0cc2777575b2d8b",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
-                "bFile": "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
-                "aRef": ""
+                "file": "csdiy/cs61b/Lecture/Hashing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "diff",
-              "title": "Diff: B-Trees（2-3 2-3-4 Trees）"
+              "icon": "lucide-file",
+              "title": "Hashing"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -101,7 +132,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#python",
+                "query": "tag:#pythondoc",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -151,13 +182,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
+                "file": "csdiy/cs61b/Lecture/Hashing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Disjoint Sets（并查集）实现总结 的大纲"
+              "title": "Hashing 的大纲"
             }
           },
           {
@@ -210,23 +241,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "42d05e228beb9d65",
+  "active": "b0740bf193c191d4",
   "lastOpenFiles": [
     "csdiy/cs61b/Lecture/Heaps.md",
-    "csdiy/cs61b/Lecture/index.md",
-    "csdiy/cs61b/Lecture/Hashing.md",
-    "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
-    "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
     "csdiy/cs61b/Lecture/Red Black Trees.md",
-    "github令牌.md",
-    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
+    "csdiy/cs61b/Lecture/index.md",
+    "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
+    "csdiy/cs61b/Lecture/Hashing.md",
     "attachments/Pasted image 20260107111016.png",
     "attachments/Pasted image 20260107105727.png",
     "attachments/Pasted image 20260107150056.png",
     "attachments/Pasted image 20260107145633.png",
     "attachments/Pasted image 20260107145617.png",
     "attachments/Pasted image 20260107143909.png",
+    "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
     "attachments/Pasted image 20260104165106.png",
+    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
     "PythonDoc/python常用库.md",
     "python,projects,ai/langchain/调用API.md",
     "python,projects,ai/langchain",
@@ -245,6 +275,7 @@
     "PythonDoc/Python装饰器.md",
     "PythonDoc/Python中星号操作符的多种用法.md",
     "PythonDoc/python进阶.md",
+    "github令牌.md",
     "python,projects,ai/ollama/Ollama 文档学习.md",
     "python,projects,ai/ollama/Ollama 流式传输.md",
     "python,projects,ai/ollama/Ollama Capabilities.md",
