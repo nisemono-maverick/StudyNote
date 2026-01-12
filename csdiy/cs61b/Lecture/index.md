@@ -4,3 +4,4 @@
 [[Red Black Trees]]
 [[Hashing]]
 [[Heaps and Priority Queues]]
+[[Tree and Graph Traversals]]
