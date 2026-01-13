@@ -21,39 +21,8 @@
               "icon": "lucide-file",
               "title": "index"
             }
-          },
-          {
-            "id": "660053abf388afa2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Lecture/Graph.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Graph"
-            }
-          },
-          {
-            "id": "41016e398cfac32b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Lecture/Tree Traversals.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Tree Traversals"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -167,13 +136,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Lecture/Graph.md",
+                "file": "csdiy/cs61b/Lecture/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Graph 的大纲"
+              "title": "index 的大纲"
             }
           }
         ],
@@ -227,17 +196,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "660053abf388afa2",
+  "active": "35b889cbb7b6afe3",
   "lastOpenFiles": [
-    "csdiy/cs61b/Lecture/Hashing.md",
-    "csdiy/cs61b/Lecture/index.md",
-    "csdiy/cs61b/Lecture/Graph.md",
     "csdiy/cs61b/Lecture/Tree Traversals.md",
+    "csdiy/cs61b/Lecture/Graph.md",
+    "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
+    "csdiy/cs61b/Lecture/index.md",
+    "csdiy/cs61b/Lecture/Hashing.md",
     "attachments/Pasted image 20260112205053.png",
     "attachments/Pasted image 20260112204706.png",
     "attachments/Pasted image 20260112203432.png",
     "attachments/Pasted image 20260112201913.png",
-    "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
     "attachments/Pasted image 20260110113402.png",
     "attachments/Pasted image 20260110112633.png",
     "attachments/Pasted image 20260110111933.png",
