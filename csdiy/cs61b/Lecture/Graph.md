@@ -1,79 +1,166 @@
-图
-图包含一组节点，一组边，每条边连接 2 个节点
-树可以看成有限制的图
+## 1. What is a Graph?
+A **graph** consists of:
+*   A set of **vertices** (also called **nodes**).
+*   A set of **edges**, each connecting a pair of vertices.
+**Trees** can be seen as a special type of graph with specific restrictions.
+
+### The Simple Graph
+In most contexts, when we say "graph," we refer to a **simple graph**, which has two key restrictions:
+1.  **No self-loops**: An edge cannot connect a vertex to itself.
+2.  **No parallel edges**: There cannot be two or more edges connecting the same pair of vertices.
 ![[Pasted image 20260112204706.png]]
-简单图（大部分情况下，提到图时指的是简单图）
-没有链接到自己的边，也就是没有长度为 1 的环
-不会有两条边连接 2 个同样的节点，也就是没有平行的边
 
+## 2. Classifying Graphs
 ![[Pasted image 20260112205053.png]]
-### 1. 按边的方向性分类
+### 2.1 By Edge Directionality
 
-| 类别      | 核心定义         | 关键特征                                       | 现实比喻                                                          |
-| :------ | :----------- | :----------------------------------------- | :------------------------------------------------------------ |
-| **无向图** | 边没有方向，只表示连接。 | 关系是**双向、对称**的。一条边 `(A, B)` 意味着 A 和 B 平等相连。 | **好友关系**（互为好友）、**道路网**（默认双车道）、**分子结构**。                       |
-| **有向图** | 边有方向，用箭头表示。  | 关系是**单向、不对称**的。一条边 `A -> B` 表示从 A 到 B。     | **关注关系**（A 关注 B）、**网页超链接**（从 A 页链接到 B 页）、**任务依赖**（A 完成才能做 B）。 |
-
-### 2. 按图中是否包含“环”分类
-
-| 类别 | 核心定义 | 关键特征 | 重要性 |
+| Type | Core Definition | Key Feature | Real-World Analogy |
 | :--- | :--- | :--- | :--- |
-| **无环图** | 图中**不存在**任何环（循环路径）。 | 沿着边的方向/连接走下去，**不可能回到起点**。 | 结构简单，代表严格的依赖或层次关系。 |
-| **有环图** | 图中**存在至少一个**环。 | 可以从某点出发，沿着边最终回到该点。 | 更普遍，能表示循环、反馈和复杂网络关系。 |
+| **Undirected Graph** | Edges have **no direction**; they just represent a connection. | The relationship is **bidirectional** and **symmetric**. An edge `(A, B)` means A and B are connected equally. | **Friendship** (mutual), **road networks** (default two-way streets), **molecular structures**. |
+| **Directed Graph (Digraph)** | Edges have a direction, typically represented by an arrow. | The relationship is **one-way** and **asymmetric**. An edge `A -> B` means a connection *from* A *to* B. | **Social media follows** (A follows B), **web hyperlinks** (page A links to page B), **task dependencies** (A must finish before B can start). |
 
- “with edge labels”（带边标签的图）：它指的是在图的每条边上，除了连接关系本身，还附加了一个额外的数据，称为**标签**。
+### 2.2 By the Presence of Cycles
 
-关于图的常见问题
-从 S 节点到 T 节点的最短路径？无环的最长路径？
-图中存在环（cycle）吗
-是否有一种方法访问所有站点，并且每条边恰好使用一次（一笔画）
-s-t Path：有一条路径（path）从 s 节点到 t 节点吗
-Connectivity：图是否连通，即是否每个节点之间都有一条路径
-Biconnectivity：是否有个节点，移除后图就不再连通
-Shortest s-t Path：从 S 节点到 T 节点的最短路径
-Cycle Detection：图中是否存在环
-Euler Tour：经过图中每条边恰好一次的路径
-Hamilton Tour：经过图中每个顶点恰好一次的路径
-Planarity: 一个图能否在**二维平面上绘制**，且满足 **“边与边之间除了在顶点处相交外，不在任何其他位置交叉”** 的性质。
-Isomorphism: 两个图是否同构
+| Type | Core Definition | Key Feature | Significance |
+| :--- | :--- | :--- | :--- |
+| **Acyclic Graph** | The graph contains **no cycles** (no circular paths). | It is impossible to start at a vertex and follow a sequence of edges to return to the starting vertex. | Represents strict hierarchies or dependencies (e.g., trees). |
+| **Cyclic Graph** | The graph contains **at least one** cycle. | It is possible to start at a vertex, follow edges, and eventually return to it. | More common, can represent feedback loops and complex networks. |
 
-先来解决其中一个问题 s-t Connectivity：s 和 t 之间是否有一条路径
-我们需要以某种方式遍历图
-一个算法
+### 2.3 With Edge Labels
+ **Edge Labels**: A graph can be "with edge labels," meaning each edge carries an additional piece of data (e.g., a weight, cost, or type).
+
+## 3. Common Graph Problems
+*   **s-t Path**: Is there a path from vertex `s` to vertex `t`?
+*   **Connectivity**: Is the graph connected? (Is there a path between *every* pair of vertices?)
+*   **Biconnectivity**: Is there a vertex whose removal disconnects the graph?
+*   **Shortest s-t Path**: What is the shortest path (by number of edges or edge weights) from `s` to `t`?
+*   **Cycle Detection**: Does the graph contain a cycle?
+*   **Euler Tour**: Is there a path that uses every edge **exactly once**?
+*   **Hamilton Tour**: Is there a path that visits every vertex **exactly once**?
+*   **Planarity**: Can the graph be drawn on a 2D plane without any edges crossing (except at vertices)?
+*   **Isomorphism**: Are two graphs structurally identical?
+
+## 4. Solving s-t Connectivity & Graph Traversal
+A naive, incorrect attempt to see if `s` is connected to `t`:
 ```java
-isconnected(Node s,Node t):
-	if (s == t):
-	    return true;
-	
-	for child in neighbors(s):
-	    if isconnected(child, t):
-	        return true;
-	
-	return false;
+isConnected(Node s, Node t):
+    if (s == t) return true;
+    for (child in neighbors(s)):
+        if isConnected(child, t) return true;
+    return false;
 ```
-其中的错误：可能造成循环
-解决方式，标记已经出现过的节点，跳过他
-```java
-isconnected(Node s,Node t):
-	mark s;
-	if (s == t):
-	    return true;
-	
-	for child in unmarked_neighbors(s):
-	    if isconnected(child, t):
-	        return true;
-	
-	return false;
-```
+**Problem**: This can run forever in cyclic graphs.
+**Solution**: **Mark** visited vertices to avoid revisiting them.
 
-我们刚刚做的操作，就是 Depth First Search（DFS）
-之所以叫深度优先，是因为在探索另一个邻近子图前，总是会把这个子图探索完，即往深度探索
+### Depth-First Search (DFS)
+The corrected algorithm is a **Depth-First Search**. It explores a branch as far as possible before backtracking and exploring the next branch.
 
-Depth First Paths
+**Depth-First Paths Algorithm** (recursive):
 ```
 dfs(v):
-	mark v;
-	for w in unmarked_neighbors(v):
-		set edgeTo[w] = v;
-		dfs(w);
+    mark v;
+    for (w in unmarked_neighbors(v)):
+        set edgeTo[w] = v; // Remember we came from v to w
+        dfs(w);
 ```
+
+**DFS Paths Implementation (Java-style):**
+```java
+public class DepthFirstPaths {
+    private boolean[] marked; // marked[v] = true if connected to source s
+    private int[] edgeTo;     // edgeTo[w] = previous vertex on path from s to w
+    private final int s;      // source vertex
+
+    public DepthFirstPaths(Graph G, int s) {
+        // ... initialize arrays
+        this.s = s;
+        dfs(G, s); // start DFS from source
+    }
+
+    private void dfs(Graph G, int v) {
+        marked[v] = true;
+        for (int w : G.adj(v)) {
+            if (!marked[w]) {
+                edgeTo[w] = v;
+                dfs(G, w);
+            }
+        }
+    }
+
+    public boolean hasPathTo(int v) { return marked[v]; }
+
+    public Iterable<Integer> pathTo(int v) {
+        if (!hasPathTo(v)) return null;
+        Stack<Integer> path = new Stack<>();
+        // Backtrack from v to s using edgeTo
+        for (int x = v; x != s; x = edgeTo[x]) {
+            path.push(x);
+        }
+        path.push(s);
+        return path;
+    }
+}
+```
+
+**DFS Node Ordering:**
+We can record the order in which nodes are visited.
+*   **Preorder**: Add the node to the list when we **first visit it** (when we push it onto the stack).
+*   **Postorder**: Add the node to the list when we **finish exploring all its neighbors** (when we pop it from the stack).
+*   **DFS with Restart**: If the graph is not fully connected, we restart DFS from an unmarked vertex until all vertices are visited.
+
+### Breadth-First Search (BFS)
+BFS explores the graph in "layers." It finds the **shortest path** (in terms of number of edges) from a source vertex to all others.
+
+**BFS Algorithm:**
+1.  Initialize a queue with the source vertex `s` and mark `s`.
+2.  While the queue is not empty:
+    *   Remove the vertex `v` from the front of the queue.
+    *   For each unmarked neighbor `n` of `v`:
+        *   Mark `n`.
+        *   Set `edgeTo[n] = v` and `distTo[n] = distTo[v] + 1`.
+        *   Add `n` to the end of the queue.
+
+## 5. Graph Representations
+
+### Common Graph API (Princeton)
+```java
+public class Graph {
+    public Graph(int V);               // Create an empty graph with V vertices
+    public void addEdge(int v, int w); // Add an edge v-w
+    Iterable<Integer> adj(int v);      // Vertices adjacent to v
+    int V();                           // Number of vertices
+    int E();                           // Number of edges
+    // ...
+}
+```
+With this API, to find the degree (number of neighbors) of a vertex, you would write:
+```java
+public static int degree(Graph G, int v) {
+    int degree = 0;
+    for (int w : G.adj(v)) degree++;
+    return degree;
+}
+```
+
+### Representation 1: Adjacency Matrix
+*   Use a `V` x `V` boolean matrix `M`.
+*   `M[v][w] = true` if there is an edge from `v` to `w`.
+*   **Space:** O (V²). Often inefficient for **sparse** graphs (graphs with far fewer than V² edges).
+*   **Edge check:** O (1) to check if a specific edge exists.
+*   **List neighbors:** O (V) to iterate over all neighbors of a vertex.
+* ![[Pasted image 20260117234702.png]]
+
+### Representation 2: Edge Set
+*   Store a collection (e.g., list, set) of all edges.
+*   Each edge is stored as a pair of vertex identifiers `(v, w)`.
+*   Simple but inefficient for most queries.
+
+### Representation 3: Adjacency List **(Most Common)**
+*   Maintain an array of size `V` (or a map from vertex id to a list).
+*   The entry at index `v` points to a list (e.g., bag, linked list) of all vertices adjacent to `v`.
+*   **Space:** O (V + E). Efficient for both sparse and dense graphs.
+*   **Edge check:** O (degree (v)) to check for a specific edge from `v`.
+*   **List neighbors:** O (degree (v)) to iterate over all neighbors of `v`.
+![[Pasted image 20260117235738.png]] ![[Pasted image 20260117235745.png]]
+
+
