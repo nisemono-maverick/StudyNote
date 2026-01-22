@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,13 +182,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Lecture/Graph.md",
+                "file": "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Graph 的大纲"
+              "title": "Heaps and Priority Queues 的大纲"
             }
           }
         ],
@@ -242,16 +242,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a389d4421bff5c3",
+  "active": "9cacbb0370e78d16",
   "lastOpenFiles": [
+    "csdiy/cs61b/Lecture/Graph.md",
+    "python,projects,ai/langchain/Memory.md",
+    "python,projects,ai/langchain/调用API.md",
     "csdiy/cs61b/Lecture/Tree Traversals.md",
     "csdiy/cs61b/Lecture/index.md",
     "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
-    "csdiy/cs61b/Lecture/Graph.md",
     "attachments/Pasted image 20260117235745.png",
     "attachments/Pasted image 20260117235738.png",
     "attachments/Pasted image 20260117234702.png",
-    "python,projects,ai/langchain/调用API.md",
     "csdiy/cs61b/Lecture/Hashing.md",
     "attachments/Pasted image 20260112205053.png",
     "attachments/Pasted image 20260112204706.png",
