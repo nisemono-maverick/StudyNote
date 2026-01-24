@@ -14,10 +14,10 @@ In most contexts, when we say "graph," we refer to a **simple graph**, which has
 ![[Pasted image 20260112205053.png]]
 ### 2.1 By Edge Directionality
 
-| Type | Core Definition | Key Feature | Real-World Analogy |
-| :--- | :--- | :--- | :--- |
-| **Undirected Graph** | Edges have **no direction**; they just represent a connection. | The relationship is **bidirectional** and **symmetric**. An edge `(A, B)` means A and B are connected equally. | **Friendship** (mutual), **road networks** (default two-way streets), **molecular structures**. |
-| **Directed Graph (Digraph)** | Edges have a direction, typically represented by an arrow. | The relationship is **one-way** and **asymmetric**. An edge `A -> B` means a connection *from* A *to* B. | **Social media follows** (A follows B), **web hyperlinks** (page A links to page B), **task dependencies** (A must finish before B can start). |
+| Type                         | Core Definition                                                | Key Feature                                                                                                    | Real-World Analogy                                                                                                                             |
+| :--------------------------- | :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Undirected Graph**         | Edges have **no direction**; they just represent a connection. | The relationship is **bidirectional** and **symmetric**. An edge `(A, B)` means A and B are connected equally. | **Friendship** (mutual), **road networks** (default two-way streets), **molecular structures**.                                                |
+| **Directed Graph (Digraph)** | Edges have a direction, typically represented by an arrow.     | The relationship is **one-way** and **asymmetric**. An edge `A -> B` means a connection *from* A *to* B.       | **Social media follows** (A follows B), **web hyperlinks** (page A links to page B), **task dependencies** (A must finish before B can start). |
 
 ### 2.2 By the Presence of Cycles
 

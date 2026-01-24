@@ -6,3 +6,4 @@
 [[Heaps and Priority Queues]]
 [[Tree Traversals]]
 [[Graph]]
+[[Shortest Paths]]
