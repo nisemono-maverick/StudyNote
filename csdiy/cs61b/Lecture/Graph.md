@@ -86,6 +86,24 @@ public class DepthFirstPaths {
             }
         }
     }
+    
+    private void dfsIterative(Graph graph, int start) {
+	    Stack<Integer> stack = new Stack<>();
+	    stack.push(start);
+	    
+	    while (!stack.isEmpty()) {
+	        int v = stack.pop();
+	        if (!marked[v]) {
+	            marked[v] = true;
+	            for (int w : graph.adj(v)) {
+	                if (!marked[w]) {
+	                    edgeTo[w] = v;
+	                    stack.push(w);
+	                }
+	            }
+	        }
+	    }
+	}
 
     public boolean hasPathTo(int v) { return marked[v]; }
 
@@ -114,11 +132,96 @@ BFS explores the graph in "layers." It finds the **shortest path** (in terms of 
 **BFS Algorithm:**
 1.  Initialize a queue with the source vertex `s` and mark `s`.
 2.  While the queue is not empty:
-    *   Remove the vertex `v` from the front of the queue.
-    *   For each unmarked neighbor `n` of `v`:
-        *   Mark `n`.
-        *   Set `edgeTo[n] = v` and `distTo[n] = distTo[v] + 1`.
-        *   Add `n` to the end of the queue.
+	*   Remove the vertex `v` from the front of the queue.
+	*   For each unmarked neighbor `n` of `v`:
+		*   Mark `n`.
+		*   Set `edgeTo[n] = v` and `distTo[n] = distTo[v] + 1`.
+		*   Add `n` to the end of the queue.
+
+**BFS Implementation (Java-style):**
+```java
+import java.util.*;  
+  
+public class BreadthFirstSearch {  
+    private boolean[] marked;  
+    private int[] edgeTo;  
+    private int[] distTo;  
+    private final int source;  
+  
+    public BreadthFirstSearch(Graph graph, int source) {  
+        validateVertex(graph, source);  
+  
+        marked = new boolean[graph.V()];  
+        edgeTo = new int[graph.V()];  
+        distTo = new int[graph.V()];  
+        this.source = source;  
+  
+        // 初始化 edgeTo，使用 -1 表示未访问  
+        for (int i = 0; i < edgeTo.length; i++) {  
+            edgeTo[i] = -1;  
+            distTo[i] = -1;  
+        }  
+  
+        bfs(graph, source);  
+    }  
+  
+    private void bfs(Graph graph, int start) {  
+        Queue<Integer> queue = new LinkedList<>();  
+        marked[start] = true;  
+        distTo[start] = 0;  
+        queue.offer(start);  
+        while (!queue.isEmpty()) {  
+            int v = queue.poll();  
+            for (int w : graph.adj(v)) {  
+                if (!marked[w]) {  
+                    marked[w] = true;  
+                    edgeTo[w] = v;  
+                    distTo[w] = distTo[v] + 1;  
+                    queue.offer(w);  
+                }  
+            }  
+        }  
+    }  
+  
+    public boolean hasPathTo(int v) {  
+        validateVertex(v);  
+        return marked[v];  
+    }  
+  
+    public int distTo(int v) {  
+        validateVertex(v);  
+        return distTo[v];  
+    }  
+  
+    public Iterable<Integer> pathTo(int v) {  
+        validateVertex(v);  
+        if (!hasPathTo(v)) return null;  
+        Stack<Integer> path = new Stack<>();  
+        for (int x = v; x != source; x = edgeTo[x]) {  
+            path.push(x);  
+        }  
+        path.push(source);  
+        return path;  
+    }  
+  
+    private void validateVertex(Graph graph, int v) {  
+        if (v < 0 || v >= graph.V()) {  
+            throw new IllegalArgumentException(  
+                    "Vertex " + v + " is not between 0 and " + (graph.V() - 1)  
+            );  
+        }  
+    }  
+  
+    private void validateVertex(int v) {  
+        if (v < 0 || v >= marked.length) {  
+            throw new IllegalArgumentException(  
+                    "Vertex " + v + " is not between 0 and " + (marked.length - 1)  
+            );  
+        }  
+    }  
+}
+```
+
 
 ## 5. Graph Representations
 
