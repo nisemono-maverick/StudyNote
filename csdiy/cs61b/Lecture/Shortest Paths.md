@@ -1,107 +1,200 @@
-Last time, use two ways to find paths in graph
-- DFS and BFS
+## 1. Basic Graph Search Methods
 
-| Problem                | Solution | Efficiency (adj. list)             |
-| :--------------------- | :------- | :--------------------------------- |
-| **s-t paths**          | DFS      | $O(V+E)$ time<br>$\Theta(V)$ space |
-| **s-t shortest paths** | BFS      | $O(V+E)$ time<br>$\Theta(V)$ space |
+### DFS (Depth-First Search)
+- **Purpose**: Find any path from source to target
+- **Efficiency**: $O(V+E)$ time, $\Theta(V)$ space (adjacency list)
+- **Best for**: Checking connectivity, topological ordering
+- **Worst case**: Spindly graphs (deep recursion stack)
 
-Space Efficiency. Is one more efficient than the other?
+### BFS (Breadth-First Search)
+- **Purpose**: Find shortest path in unweighted graphs
+- **Efficiency**: $O(V+E)$ time, $\Theta(V)$ space (adjacency list)
+- **Best for**: Unweighted graphs, level-order traversal
+- **Worst case**: "Bushy" graphs (large queue)
 
-DFS is worse for spindly graphs.
-• Call stack gets very deep.
-• Computer needs O (V) memory to remember recursive calls (see CS 61 C).
+## 2. The Weighted Graph Problem
 
-BFS is worse for absurdly "bushy" graphs.
-• Queue gets very large. In worst case, queue will require 0 (V) memory.
-• Example: 1,000,000 vertices that are all connected. 999,999 will be enqueued at once.
+**Problem**: BFS fails with weighted edges because it doesn't consider edge weights.
 
-Note: In our implementations, we have to spend O (V) memory anyway to track distTo and edgeTo arrays.
-
-• Can optimize by storing distTo and edgeTo in a map instead of an array.
-
-
-
-when we handle a question that edge has weight, BFS is not good for it does not consider the edge weights
-BFS will yield a route of length 330 m instead of therefore we need an algorithm that takes into account edge distances, also known as “edge weights”.
+**Example**: BFS might choose a 330 m route when a 150 m route exists, simply because the 330 m route has fewer edges.
 ![[Pasted image 20260124153750.png]] ![[Pasted image 20260124153801.png]]
 
+**Goal**: Find shortest paths from source vertex s to every other vertex in weighted directed graphs.
+**Observaton**: Soluton will always be a tree
 
-Goal: Find the shortest paths form source vertex s to every other vertex.
-Observaton: Soluton will always be a tree
+## 3. Failed Approaches
 
-Some bad Algrithms
-1. like BFS
-Add the start (A) to the fringe.
-While fringe is not empty:
-Remove a vertex from the fringe and mark it.
-For each outgoing edge v→w: if w is not already part of SPT, add the edge, and add w to fringe.
-![[Pasted image 20260124154043.png]]
-why it is bad
-edges are not equal. when we mark a vertex, we can not find another path to that vertex, but that might be the shorter one.
-The edge B→A is not added to SPT, because A is already part of the SPT.
+### 3.1 Naive BFS Extension
+```python
+Add start to fringe
+While fringe not empty:
+    Remove vertex from fringe and mark it
+    For each outgoing edge v→w:
+        If w not in SPT, add edge and add w to fringe
+```
+**Problem**: Once a vertex is marked, we can't find a better (shorter) path to it.
 
-2. Dummy nodes
-Create a new graph by adding a bunch of dummy nodes every init along an edge, then run breadth-first search.
-
-• When we hit one of our original nodes, add edge to the SPT.
+### 3.2 Dummy Nodes
+- Convert weighted edges to multiple unit edges
+- Run BFS on expanded graph
 ![[Pasted image 20260124154213.png]]
-why it is bad
-a graph has big weight
 
-3. Best-First Search
-Add the start (A) to the fringe.
-While fringe is not empty:
-     Remove the closest vertex from the fringe and mark it.
-     For each outgoing edge v→w: if w is not already part of SPT,  add the edge, and add w to fringe.
-![[Pasted image 20260124155014.png]]
-we still get the wrong answer, beacause we already add A->B to fringe ,so C->B does not consider.
-the right thing: add edge C->B, and thrown out edge A->B
+**Problem**: Explodes graph size with large weights, impractical memory usage.
 
-Dijkstra's Algorithm
-Add all vertices to the fringe. 
-     Remove the closest vertex from the fringe and mark it.
-     For each outgoing edge v→w: if the edge gives a better distance to w,  
-    add the edge, and update w in the fringe.
+### 3.3 Best-First Search
+```python
+Add start to fringe
+While fringe not empty:
+    Remove CLOSEST vertex from fringe and mark it
+    For each outgoing edge v→w:
+        If w not in SPT, add edge and add w to fringe
+```
+**Problem**: Still greedy - may not update vertices when better paths are found.
 
-implement tips:
-Because we choose the closest vertex everytime, we can use the PQ to implement fringe
-use distTo, edgeTo array, firnge queue
+## 4. Dijkstra's Algorithm
 
+### Core Idea
+Always expand the vertex with the smallest known distance from source, updating neighbors if better paths are found.
 
-Dijkstra’s:
-- PQ.add(source, 0)
-- For other vertices v, PQ.add(v, infinity)
-- While PQ is not empty:
-- p = PQ.removeSmallest()
-- Relax all edges from p
-Relaxing an edge p → q with weight w:
-- If distTo[p] + w < distTo[q]:
-- distTo[q] = distTo[p] + w
-- edgeTo[q] = p    
-- PQ.changePriority(q, distTo[q])
+### Algorithm Steps
+```
+1. Add all vertices to priority queue (fringe) with distance ∞
+2. Set source distance to 0
+3. While PQ not empty:
+    p = PQ.removeSmallest()
+    For each edge p→q with weight w:
+        If distTo[p] + w < distTo[q]:
+            Update distTo[q] = distTo[p] + w
+            Update edgeTo[q] = p
+            PQ.changePriority(q, distTo[q])
+```
 
-when weight is negative number, Dijkstra's Algorithm fail
+### Implementation Details
 
-Runtime Analysis
-when we relax a edge, we change the priority of Fringe
+**Data Structures**:
+- `distTo[v]`: shortest known distance from source to v
+- `edgeTo[v]`: last edge on shortest path to v
+- Priority Queue: stores vertices ordered by current best distance
+
+**Edge Weighted Digraph Implementation**:
+```java
+public class EdgeWeightedDigraph {
+    private List<DirectedEdge>[] adj;
+    private List<DirectedEdge> edges;
+    
+    public void addEdge(DirectedEdge e) {
+        // Validate vertices and weight
+        if (!hasEdge(e.from(), e.to())) {
+            adj[e.from()].add(e);
+            edges.add(e);
+        }
+    }
+}
+```
+
+**Dijkstra Implementation**:
+```java
+public class DijkstraSP {
+    private double[] distTo;
+    private DirectedEdge[] edgeTo;
+    private IndexMinPQ<Double> pq;
+    
+    public DijkstraSP(EdgeWeightedDigraph graph, int source) {
+        // Initialize all distances to infinity
+        distTo = new double[graph.V()];
+        for (int i = 0; i < graph.V(); i++) {
+            distTo[i] = Double.POSITIVE_INFINITY;
+        }
+        distTo[source] = 0.0;
+        
+        // Process vertices in priority order
+        while (!pq.isEmpty()) {
+            int v = pq.delMin();
+            for (DirectedEdge e : graph.adj(v)) {
+                relax(e);
+            }
+        }
+    }
+    
+    private void relax(DirectedEdge e) {  
+	    int from = e.from();  
+	    int to = e.to();  
+	    if (distTo[from] + e.weight() < distTo[to]) {  
+	            distTo[to] = distTo[from] + e.weight();  
+	            edgeTo[to] = e;  
+	            pq.changeKey(to, distTo[to]);  
+	    }  
+	}
+}
+```
+
+### Runtime Analysis
 
 |                       | Operaritons | Cost per operation | Total cost |
 | :-------------------- | :---------- | :----------------- | ---------- |
 | **PQ add**            | V           | $O(logV)$          | $O(VlogV)$ |
 | **PQ removeSmallest** | V           | $O(logV)$          | $O(VlogV)$ |
-| PQ changePriority     | E           | $O(logV)$          | $O(ElogV)$ |
+| **PQ changePriority** | E           | $O(logV)$          | $O(ElogV)$ |
 
-assume E > V, runtime $O(ElogV)$
+**Overall**: O (E log V) assuming E > V
 
-Is this a good algorithm for a navigation application?
-how we find the SP from Denver to NYC with Dijkstra’s
-Dijkstra’s will explore every place within nearly two thousand miles of Denver before it locates NYC.
-we only care about the **single target** NYC
+### Early Termination Optimization
+For single-target queries, stop when target vertex is removed from PQ:
+```java
+while (!pq.isEmpty()) {
+    int v = pq.delMin();
+    if (v == target) break;  // Early exit
+    // ... relax edges
+}
+```
 
-A* Algorithm
-add a penalty to nodes far away from target
-- Visit vertices in order of d(Denver, v) + h(v, goal), where h(v, goal) is an estimate of the distance from v to our goal NYC.
-- the penalty h (v, goal) is Prior 
+### Limitations
+- **Negative weights**: Dijkstra fails with negative edge weights
+- **Single-source focus**: Explores many irrelevant vertices for single-target queries
 
-if we want to find a way from A to B, but not through C, we can penalty h (C, B) infinity
+## 5. A* Algorithm
+
+### Motivation
+Dijkstra explores all directions equally. A* biases search toward the target using a heuristic.
+
+### Algorithm
+```
+f(v) = g(v) + h(v, goal)
+where:
+  g(v) = actual distance from source to v
+  h(v, goal) = heuristic estimate from v to goal
+```
+
+**Properties**:
+- If h (v) is admissible (never overestimates), A* finds optimal path
+- If h (v) is consistent, vertices are processed at most once
+
+### Implementation
+```java
+public class AStarSP {
+    private final ToDoubleFunction<Integer> heuristic;
+    
+    private void relax(DirectedEdge e) {
+        // Similar to Dijkstra but with heuristic
+        double newPriority = distTo[to] + heuristic.applyAsDouble(to);
+        pq.changeKey(to, newPriority);
+    }
+}
+```
+
+### Heuristic Examples
+- **Euclidean distance**: Straight-line distance in spatial graphs
+- **Manhattan distance**: Grid-based navigation
+- **Penalty functions**: Avoid certain areas by setting h (v) = ∞
+
+## 6. Practical Considerations
+
+### Memory Optimization
+- Use maps instead of arrays for `distTo` and `edgeTo` when graph is sparse
+- Consider bidirectional search for very large graphs
+
+### Real-World Applications
+- Navigation systems (Google Maps, GPS)
+- Network routing protocols
+- Game AI pathfinding
+- Logistics and supply chain optimization
