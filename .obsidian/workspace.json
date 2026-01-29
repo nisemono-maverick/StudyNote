@@ -23,52 +23,37 @@
             }
           },
           {
-            "id": "f473054505e2fc3b",
+            "id": "d64a497b9659cb99",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PythonDoc/python进阶.md",
+                "file": "csdiy/cs61b/Lecture/Shortest Paths.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "python进阶"
+              "title": "Shortest Paths"
             }
           },
           {
-            "id": "04facdbaf6adfa11",
+            "id": "397519e193b7fd0c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PythonDoc/Builder Pattern.md",
+                "file": "csdiy/cs61b/Lecture/Directed Acyclic Graphs.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Builder Pattern"
-            }
-          },
-          {
-            "id": "d48e0231203f18ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "PythonDoc/Factory Pattern.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Factory Pattern"
+              "title": "Directed Acyclic Graphs"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PythonDoc/Builder Pattern.md",
+                "file": "csdiy/cs61b/Lecture/Shortest Paths.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Builder Pattern 的大纲"
+              "title": "Shortest Paths 的大纲"
             }
           }
         ],
@@ -242,15 +227,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04facdbaf6adfa11",
+  "active": "d64a497b9659cb99",
   "lastOpenFiles": [
-    "PythonDoc/Factory Pattern.md",
-    "PythonDoc/Builder Pattern.md",
-    "PythonDoc/python进阶.md",
     "csdiy/cs61b/Lecture/index.md",
+    "csdiy/cs61b/Lecture/Directed Acyclic Graphs.md",
+    "csdiy/cs61b/Lecture/Minimum Spanning Trees.md",
+    "attachments/Pasted image 20260127152711.png",
+    "csdiy/cs61b/Lecture/Disjoint.md",
+    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
+    "csdiy/cs61b/Lecture/Shortest Paths.md",
+    "csdiy/cs61b/Lecture/Graph.md",
+    "attachments/Pasted image 20260127152652.png",
+    "attachments/Pasted image 20260127151621.png",
+    "PythonDoc/Builder Pattern.md",
+    "PythonDoc/Factory Pattern.md",
+    "PythonDoc/python进阶.md",
     "csdiy/cs61b/Project/project 2 Design Document.md",
     "csdiy/cs61b/Lecture/Tree Traversals.md",
-    "csdiy/cs61b/Lecture/Graph.md",
     "csdiy/cs61b/Project",
     "attachments/regular05.pdf",
     "attachments/Pasted image 20260124155014.png",
@@ -260,11 +253,7 @@
     "attachments/Pasted image 20260124153750.png",
     "attachments/Pasted image 20260117235745.png",
     "attachments/Pasted image 20260117235738.png",
-    "attachments/Pasted image 20260117234702.png",
-    "attachments/Pasted image 20260112205053.png",
-    "attachments/Pasted image 20260112204706.png",
     "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
-    "csdiy/cs61b/Lecture/Shortest Paths.md",
     "python,projects,ai/agno/Agno 文档学习.md",
     "python,projects,ai/fastapi/用 FastAPI 脚手架初始化一个可协作项目.md",
     "python,projects,ai/fastapi",
@@ -273,7 +262,6 @@
     "python,projects,ai/langchain/调用API.md",
     "csdiy/cs61b/Lecture/Hashing.md",
     "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
-    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
     "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
     "csdiy/cs61b/Lecture/Red Black Trees.md",
     "csdiy/cs61b/Lecture/Heaps.md",
@@ -284,10 +272,6 @@
     "csdiy/cs61b/Lecture",
     "csdiy/cs61b",
     "csdiy",
-    "PythonDoc/模式匹配（match case语句）.md",
-    "PythonDoc/切片.md",
-    "PythonDoc/使用 tqdm 为 Python 应用添加进度条.md",
-    "PythonDoc/Python迭代器.md",
     "python,projects,ai/ollama",
     "python,projects,ai/流畅的Python",
     "未命名.canvas"

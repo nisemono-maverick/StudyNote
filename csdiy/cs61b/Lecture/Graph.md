@@ -21,10 +21,10 @@ In most contexts, when we say "graph," we refer to a **simple graph**, which has
 
 ### 2.2 By the Presence of Cycles
 
-| Type | Core Definition | Key Feature | Significance |
-| :--- | :--- | :--- | :--- |
-| **Acyclic Graph** | The graph contains **no cycles** (no circular paths). | It is impossible to start at a vertex and follow a sequence of edges to return to the starting vertex. | Represents strict hierarchies or dependencies (e.g., trees). |
-| **Cyclic Graph** | The graph contains **at least one** cycle. | It is possible to start at a vertex, follow edges, and eventually return to it. | More common, can represent feedback loops and complex networks. |
+| Type              | Core Definition                                       | Key Feature                                                                                            | Significance                                                    |
+| :---------------- | :---------------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------- |
+| **Acyclic Graph** | The graph contains **no cycles** (no circular paths). | It is impossible to start at a vertex and follow a sequence of edges to return to the starting vertex. | Represents strict hierarchies or dependencies (e.g., trees).    |
+| **Cyclic Graph**  | The graph contains **at least one** cycle.            | It is possible to start at a vertex, follow edges, and eventually return to it.                        | More common, can represent feedback loops and complex networks. |
 
 ### 2.3 With Edge Labels
  **Edge Labels**: A graph can be "with edge labels," meaning each edge carries an additional piece of data (e.g., a weight, cost, or type).

@@ -7,3 +7,5 @@
 [[Tree Traversals]]
 [[Graph]]
 [[Shortest Paths]]
+[[Minimum Spanning Trees]]
+[[Directed Acyclic Graphs]]
