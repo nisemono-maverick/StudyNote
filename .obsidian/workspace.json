@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2d642b88d5afe49b",
+        "id": "029c2ec40ea4f2da",
         "type": "tabs",
         "children": [
           {
-            "id": "04b6b4d20d82307f",
+            "id": "43dede7ea2e122c4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Lecture/index.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "index"
+              "title": "新标签页"
             }
           }
         ]
@@ -103,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "csdiy/cs61b/Lecture/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "index 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -122,12 +116,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "csdiy/cs61b/Lecture/Graph.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Graph 的出链列表"
+              "title": "出链"
             }
           },
           {
@@ -136,13 +129,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Lecture/index.md",
+                "file": "csdiy/cs61b/学习计划.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "index 的大纲"
+              "title": "学习计划 的大纲"
             }
           }
         ]
@@ -185,34 +178,45 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false,
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "04b6b4d20d82307f",
+  "active": "43dede7ea2e122c4",
   "lastOpenFiles": [
-    "csdiy/cs61b/Lecture/Software Engineering.md",
     "csdiy/cs61b/Lecture/index.md",
+    "csdiy/cs61b/Lecture/Tree Traversals.md",
+    "csdiy/cs61b/Lecture/Sort.md",
+    "csdiy/cs61b/Proj.BYOW/Lab09 Conway's Game of Life.md",
+    "csdiy/cs61b/Proj.BYOW",
+    "csdiy/cs61b/未命名.md",
+    "python,projects,ai/ollama/Ollama 文档学习.md",
+    "python,projects,ai/ollama/Ollama Capabilities.md",
+    "csdiy/cs61b/Lecture/Software Engineer.md",
+    "csdiy/cs61b/学习计划.md",
+    "csdiy/cs61b/Lecture/Prefix Operations and Tries.md",
+    "csdiy/cs61b/Lecture/Minimum Spanning Trees.md",
+    "attachments/Pasted image 20260206155644.png",
+    "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
     "csdiy/cs61b/Lecture/Shortest Paths.md",
+    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
+    "csdiy/cs61b/Lecture/Software Engineering.md",
     "csdiy/cs61b/Lecture/Directed Acyclic Graphs.md",
     "csdiy/cs61b/Lecture/Graph.md",
-    "csdiy/cs61b/Lecture/Minimum Spanning Trees.md",
     "attachments/Pasted image 20260127152711.png",
     "csdiy/cs61b/Lecture/Disjoint.md",
-    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
     "attachments/Pasted image 20260127152652.png",
     "attachments/Pasted image 20260127151621.png",
     "PythonDoc/Builder Pattern.md",
     "PythonDoc/Factory Pattern.md",
     "PythonDoc/python进阶.md",
     "csdiy/cs61b/Project/project 2 Design Document.md",
-    "csdiy/cs61b/Lecture/Tree Traversals.md",
     "csdiy/cs61b/Project",
     "attachments/regular05.pdf",
     "attachments/Pasted image 20260124155014.png",
@@ -221,28 +225,16 @@
     "attachments/Pasted image 20260124153801.png",
     "attachments/Pasted image 20260124153750.png",
     "attachments/Pasted image 20260117235745.png",
-    "attachments/Pasted image 20260117235738.png",
-    "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
     "python,projects,ai/agno/Agno 文档学习.md",
     "python,projects,ai/fastapi/用 FastAPI 脚手架初始化一个可协作项目.md",
     "python,projects,ai/fastapi",
     "PythonDoc/策略模式.md",
-    "python,projects,ai/langchain/Memory.md",
-    "python,projects,ai/langchain/调用API.md",
-    "csdiy/cs61b/Lecture/Hashing.md",
-    "csdiy/cs61b/Lecture/B-Trees（2-3 2-3-4 Trees）.md",
-    "csdiy/cs61b/Lecture/BSTs（Binary Search Trees）.md",
-    "csdiy/cs61b/Lecture/Red Black Trees.md",
-    "csdiy/cs61b/Lecture/Heaps.md",
-    "PythonDoc/python常用库.md",
     "python,projects,ai/langchain",
-    "python,projects,ai/agno/Agents.md",
     "python,projects,ai/agno",
     "csdiy/cs61b/Lecture",
     "csdiy/cs61b",
     "csdiy",
     "python,projects,ai/ollama",
-    "python,projects,ai/流畅的Python",
     "未命名.canvas"
   ]
 }

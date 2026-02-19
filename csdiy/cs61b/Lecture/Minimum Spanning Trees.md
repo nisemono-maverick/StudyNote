@@ -85,6 +85,7 @@ We need a data structure to track connectivity as we add edges. A **[[Disjoint S
   - If **no**, add the edge to the MST and **union** the two components.
 
 ### Runtime Analysis of Kruskal's Algorithm
+
 | Operation            | Number of Times | Cost per Op | Total Cost      |
 | -------------------- | --------------- | ----------- | --------------- |
 | **Sort Edges**       | 1               | O (E log E) | O (E log E)     |

@@ -9,3 +9,5 @@
 [[Shortest Paths]]
 [[Minimum Spanning Trees]]
 [[Directed Acyclic Graphs]]
+[[Prefix Operations and Tries]]
+[[Sort]]
