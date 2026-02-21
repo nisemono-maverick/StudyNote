@@ -267,16 +267,16 @@ Counting sort works when keys are integers in a small range [0, R-1]:
 
 ## 8. Algorithm Comparison
 
-| Algorithm | Best Case | Worst Case | Space | Stable? | Notes |
-|-----------|-----------|------------|-------|---------|-------|
-| **Selection Sort** | Θ(N²) | Θ(N²) | Θ(1) | No | Simple, always N² comparisons |
-| **Heapsort** | Θ(N) | Θ(N log N) | Θ(1) | No | Guaranteed O(N log N) |
-| **Mergesort** | Θ(N log N) | Θ(N log N) | Θ(N) | Yes | Stable, predictable |
-| **Insertion Sort** | Θ(N) | Θ(N²) | Θ(1) | Yes | Fast for small/nearly sorted arrays |
-| **Quicksort** | Θ(N log N) | Θ(N²) | Θ(log N) | No | Fastest in practice (with optimizations) |
-| **Counting Sort** | Θ(N + R) | Θ(N + R) | Θ(N + R) | Yes | Integer keys only |
-| **LSD Radix Sort** | Θ(WN) | Θ(WN + WR) | Θ(N + R) | Yes | Fixed-width keys |
-| **MSD Radix Sort** | Θ(N + R) | Θ(WN + WR) | Θ(N + WR) | Yes | Variable-width keys |
+| Algorithm          | Best Case  | Worst Case | Space     | Stable? | Notes                                    |
+| ------------------ | ---------- | ---------- | --------- | ------- | ---------------------------------------- |
+| **Selection Sort** | Θ(N²)      | Θ(N²)      | Θ(1)      | No      | Simple, always N² comparisons            |
+| **Heapsort**       | Θ(N)       | Θ(N log N) | Θ(1)      | No      | Guaranteed O(N log N)                    |
+| **Mergesort**      | Θ(N log N) | Θ(N log N) | Θ(N)      | Yes     | Stable, predictable                      |
+| **Insertion Sort** | Θ(N)       | Θ(N²)      | Θ(1)      | Yes     | Fast for small/nearly sorted arrays      |
+| **Quicksort**      | Θ(N log N) | Θ(N²)      | Θ(log N)  | No      | Fastest in practice (with optimizations) |
+| **Counting Sort**  | Θ(N + R)   | Θ(N + R)   | Θ(N + R)  | Yes     | Integer keys only                        |
+| **LSD Radix Sort** | Θ(WN)      | Θ(WN + WR) | Θ(N + R)  | Yes     | Fixed-width keys                         |
+| **MSD Radix Sort** | Θ(N + R)   | Θ(WN + WR) | Θ(N + WR) | Yes     | Variable-width keys                      |
 
 ### Summary of Core Ideas
 

@@ -11,3 +11,5 @@
 [[Directed Acyclic Graphs]]
 [[Prefix Operations and Tries]]
 [[Sort]]
+
+[[Compression]]
