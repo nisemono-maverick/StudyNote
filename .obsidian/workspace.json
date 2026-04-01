@@ -4,71 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "4d8ccf557a728d86",
+        "id": "454fc12695211493",
         "type": "tabs",
         "children": [
           {
-            "id": "e5750d9b3f6be3c3",
+            "id": "71d91edf0c642b33",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/DesignDocument_Template.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "DesignDocument_Template"
-            }
-          },
-          {
-            "id": "5e4053349bf1e294",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Lab09 Conway's Game of Life.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Lab09 Conway's Game of Life"
-            }
-          },
-          {
-            "id": "c70812e975263e6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Skeleton.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Skeleton"
-            }
-          },
-          {
-            "id": "366afba3208c1ca7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Proj.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Proj"
+              "title": "新标签页"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5026054382324,
-    "collapsed": true
+    "width": 266.5026054382324
   },
   "right": {
     "id": "df7c7a838a0ea4e4",
@@ -126,6 +74,7 @@
       {
         "id": "90e075932855bde2",
         "type": "tabs",
+        "dimension": 56.242568370986916,
         "children": [
           {
             "id": "a40ef328d0c773c0",
@@ -150,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Proj.md",
+                "file": "Unix/unix_architecture.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Proj 的反向链接列表"
+              "title": "unix_architecture 的反向链接列表"
             }
           },
           {
@@ -183,13 +132,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Proj.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Proj 的大纲"
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "3819ed4644c1c26f",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
             }
           }
         ],
@@ -198,6 +156,7 @@
       {
         "id": "a886ebb5fa7a0bbd",
         "type": "tabs",
+        "dimension": 43.757431629013084,
         "children": [
           {
             "id": "2bc1d680b9a59137",
@@ -229,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 346.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -240,57 +199,58 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "claudian:Open Claudian": false
     }
   },
-  "active": "366afba3208c1ca7",
+  "active": "b0740bf193c191d4",
   "lastOpenFiles": [
-    "csdiy/cs61b/Proj.BYOW/Skeleton.md",
+    "Lacan/拉康精神分析系统性入门学习方案.md",
+    "Lacan/拉康学习执行清单.md",
+    "Lacan/📘 概念笔记.md",
+    "Lacan/❓ 问题笔记.md",
+    "Lacan/🎬 案例笔记.md",
+    "Lacan/✍️ 分析文章.md",
+    "Unix/APUE第1章-UNIX基础知识.md",
+    "未命名.md",
+    "Lacan",
+    "Unix/Unix系统架构概览.md",
+    "Unix/unix_architecture.jpg",
+    "Unix/APUE第2章-UNIX标准及实现.md",
+    "Unix/apue_code/limits2.c",
+    "Unix/apue_code/limits.c",
+    "Unix/apue_code/pathconf.sym",
+    "Unix/apue_code/sysconf.sym",
+    "Unix/apue_code/2.5.4.awk",
+    "Unix/apue_code/a.out",
+    "Unix/apue_code/ch01_ls.c",
+    "Unix/apue_code/myapue.h",
+    "Unix/apue_code",
+    "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
     "csdiy/cs61b/Proj.BYOW/Proj.md",
+    "csdiy/cs61b/Proj.BYOW/Project3 Document.md",
     "csdiy/cs61b/Proj.BYOW/Lab09 Conway's Game of Life.md",
-    "csdiy/cs61b/Proj.BYOW/DesignDocument_Template.md",
-    "csdiy/cs61b/Lecture/Computability.md",
+    "csdiy/cs61b/Proj.BYOW/DesignDocument_Template 1.md",
+    "csdiy/cs61b/Proj.BYOW/RandomUtils 文档.md",
+    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
+    "csdiy/cs61b/Proj.BYOW/Skeleton.md",
     "csdiy/cs61b/Proj.BYOW/StdDraw_API.md",
+    "csdiy/cs61b/Lecture/Tree Traversals.md",
+    "csdiy/cs61b/Lecture/Computability.md",
     "csdiy/cs61b/Lecture/Compression.md",
     "csdiy/cs61b/Lecture/index.md",
-    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
     "csdiy/cs61b/Proj.BYOW/Tetris.md",
     "csdiy/cs61b/Lecture/Sort.md",
-    "csdiy/cs61b/Lecture/Tree Traversals.md",
-    "csdiy/cs61b/Proj.BYOW",
     "csdiy/cs61b/未命名.md",
-    "python,projects,ai/ollama/Ollama 文档学习.md",
-    "python,projects,ai/ollama/Ollama Capabilities.md",
-    "csdiy/cs61b/Lecture/Software Engineer.md",
-    "csdiy/cs61b/学习计划.md",
-    "csdiy/cs61b/Lecture/Prefix Operations and Tries.md",
-    "csdiy/cs61b/Lecture/Minimum Spanning Trees.md",
     "attachments/Pasted image 20260206155644.png",
-    "csdiy/cs61b/Lecture/Heaps and Priority Queues.md",
-    "csdiy/cs61b/Lecture/Shortest Paths.md",
-    "csdiy/cs61b/Lecture/Disjoint Sets（并查集）实现总结.md",
-    "csdiy/cs61b/Lecture/Software Engineering.md",
-    "csdiy/cs61b/Lecture/Directed Acyclic Graphs.md",
-    "csdiy/cs61b/Lecture/Graph.md",
     "attachments/Pasted image 20260127152711.png",
-    "csdiy/cs61b/Lecture/Disjoint.md",
     "attachments/Pasted image 20260127152652.png",
     "attachments/Pasted image 20260127151621.png",
-    "csdiy/cs61b/Project",
-    "attachments/regular05.pdf",
     "attachments/Pasted image 20260124155014.png",
     "attachments/Pasted image 20260124154043.png",
     "attachments/Pasted image 20260124154213.png",
     "attachments/Pasted image 20260124153801.png",
     "attachments/Pasted image 20260124153750.png",
-    "attachments/Pasted image 20260117235745.png",
-    "python,projects,ai/fastapi",
-    "python,projects,ai/langchain",
-    "python,projects,ai/agno",
-    "csdiy/cs61b/Lecture",
-    "csdiy/cs61b",
-    "csdiy",
-    "python,projects,ai/ollama",
     "未命名.canvas"
   ]
 }
