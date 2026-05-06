@@ -1,4 +1,44 @@
+# 隐藏所有隐藏文件/目录（包括 .claude 配置、.DS_Store 等）
 .*
 !.gitignore
 !.obsidian
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 敏感配置（API密钥、令牌等）
 github令牌.md
+*.env
+*.env.local
+*.env.*
+
+# Claude插件配置（含API密钥）
+.claude/
+
+# 情绪日记（个人隐私内容）
+Journal/
+
+# 电子书（版权内容）
+*.epub
+*.mobi
+*.pdf
+
+# 编译产物/二进制
+*.out
+*.o
+*.so
+*.dll
+*.exe
+
+# 压缩包
+*.zip
+*.tar.gz
+*.rar
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*~

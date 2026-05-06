@@ -1,203 +1,325 @@
-# World 类开发指南  
-  
-## 一、世界配置常量  
-  
-```java  
-public class World {  
-    // ========== 世界尺寸 ==========    
-    private static final int WIDTH = 80;    
-    private static final int HEIGHT = 50;    
-    // ========== 房间配置 ==========    
-    private static final int MAX_ATTEMPTS = 100;      // 最大尝试次数  
-    private static final int TARGET_ROOM_COUNT = 25;  // 目标房间数  
-    // 大房间（1个，Boss房/起始房）  
-    private static final int BIG_ROOM_MIN_W = 20;    
-    private static final int BIG_ROOM_MAX_W = 25;    
-    private static final int BIG_ROOM_MIN_H = 10;    
-    private static final int BIG_ROOM_MAX_H = 15;    
-    // 正常房间（约80%，主体探索区域）  
-    private static final int NORMAL_ROOM_MIN_W = 5;    
-    private static final int NORMAL_ROOM_MAX_W = 10;    
-    private static final int NORMAL_ROOM_MIN_H = 3;    
-    private static final int NORMAL_ROOM_MAX_H = 8;    
-    // 小房间（约20%，隐藏奖励房）  
-    private static final int SMALL_ROOM_MIN_W = 3;    
-    private static final int SMALL_ROOM_MAX_W = 5;    
-    private static final int SMALL_ROOM_MIN_H = 3;    
-    private static final int SMALL_ROOM_MAX_H = 5;    
-    // ========== 实例变量 ==========    
-    private TETile[][] world;    
-    private List<Room> rooms;    
-    private Random random;    
-    private Position avatarPos;}  
-```  
-  
-## 二、内部类 
+# BYOW Implementation Reference
 
-### 2.1 Room 类
-用于记录房间的坐标，大小
+> 本文档与实际代码同步，记录当前已实现的核心逻辑和接口。
+> 最后更新：2026-04-14（3A 完成）
 
-| 属性            | 说明       |
-| ------------- | -------- |
-| `x: int`      | 记录左下角横坐标 |
-| `y: int`      | 记录左下角纵坐标 |
-| `width: int`  | 记录宽度     |
-| `height: int` | 记录高度     |
+---
 
-| 构造方法                                        | 说明         | 复杂度   |
-| ------------------------------------------- | ---------- | ----- |
-| `Room(int x, int y, int width, int height)` | 根据属性生成房间   | O (?) |
+## 一、项目结构
 
-| 方法               | 说明       | 复杂度   |
-| ---------------- | -------- | ----- |
-| `centerX(): int` | 返回中心的横坐标 | O (?) |
-| `centerY(): int` | 返回中心的纵坐标 | O (?) |
-| `top(): int`     | 返回上边界    |       |
-| `bottom(): int`  | 返回下边界    |       |
-| `left(): int`    | 返回左边界    |       |
-| `right(): int`   | 返回右边界    |       |
+```
+proj3/src/
+├── core/
+│   ├── Main.java              # 程序入口（3A：直接渲染；3B：需加菜单）
+│   ├── World.java             # 世界生成 + 角色位置
+│   ├── AutograderBuddy.java   # 输入解析 + autograder 接口
+│	└── game/ ← 新包
+│		├── GameEngine.java ← 可选，主循环容器
+│		├── GameState.java ← 状态接口
+│		├── MenuState.java
+│		├── SeedInputState.java
+│		└── PlayingState.java
+├── tileengine/
+│   ├── TETile.java            # （禁止修改 character 相关方法）
+│   ├── Tileset.java           # 瓦片常量
+│   └── TERenderer.java        # 渲染器
+└── utils/
+    ├── RandomUtils.java
+    └── FileUtils.java
+```
 
-### 2.2 RoomType 类
-`private enum RoomType { BIG, NORMAL, SMALL }`
+---
 
-### 2.3 Position 类
-- [ ] 待完成
+## 二、World 类（当前实现）
 
-## 三、核心方法清单  
-  
-### 3.1 构造与初始化  
-  
-| 方法                  | 功能                         | 复杂度    |
-| ------------------- | -------------------------- | ------ |
-| `World(long seed)`  | 初始化随机种子，分配数组，开始生成          | O(W×H) |
-| `initialize()`      | 主流程：填充空白→生成房间→连接走廊→加墙壁→放玩家 | O(N²)  |
-| `fillWithNothing()` | 将全部格子设为 Tileset.NOTHING    | O(W×H) |
-  
-### 3.2 房间生成  
-  
-| 方法                                        | 功能            | 关键逻辑        |     |
-| ----------------------------------------- | ------------- | ----------- | --- |
-| `generateRooms()`                         | 按优先级生成三类房间    | 大→正常→小      |     |
-| `tryPlaceBigRoom()`                       | 尝试放置1个大房间     | 单独处理，失败也继续  |     |
-| `tryPlaceRooms(int count, RoomType type)` | 批量尝试放置房间      | 重叠则重试，计尝试次数 |     |
-| `createRandomRoom(RoomType type)`         | 根据类型生成随机尺寸房间  | 随机位置+尺寸，留边距 |     |
-| `isValidPosition(Room r)`                 | 检查房间是否合法      | 不靠边 + 不重叠   |     |
-| `overlaps(Room r)`                        | 检查与现有房间是否重叠   | 扩展1格间隙（给墙壁） |     |
-| `carveRoom(Room r)`                       | 将房间区域设为 FLOOR | 双重循环填充      |     |
-  
-### 3.3 走廊生成  
-  
-| 方法                                       | 功能          | 策略           |     |
-| ---------------------------------------- | ----------- | ------------ | --- |
-| `connectRooms()`                         | 连接所有房间      | 顺序连接，i 连 i+1 |     |
-| `carveCorridor(Room a, Room b)`          | 在两个房间中心间挖走廊 | L形，随机方向      |     |
-| `carveHorizontal(int x1, int x2, int y)` | 水平挖走廊       | 包含两端点        |     |
-| `carveVertical(int y1, int y2, int x)`   | 垂直挖走廊       | 包含两端点        |     |
-  
-**走廊方向策略**：  
-如果随机选择"先水平后垂直":  
-    从 (x1,y1) 水平挖到 (x2,y1)    然后从 (x2,y1) 垂直挖到 (x2,y2)  
-如果随机选择"先垂直后水平":  
-    从 (x1,y1) 垂直挖到 (x1,y2)    然后从 (x1,y2) 水平挖到 (x2,y2)
+### 2.1 配置常量
 
-### 3.4 墙壁与玩家  
-  
-| 方法 | 功能 | 策略 |  
-|------|------|------|  
-| `addWalls()` | 在地板周围添加墙壁 | 检查8邻域 |  
-| `placeAvatar()` | 放置玩家角色 | 放在第一个房间中心 |  
-| `isFloor(int x, int y)` | 判断是否为地板 | 边界检查 + tile判断 |  
-  
-### 3.5 公开接口  
-  
-| 方法 | 功能 |  
-|------|------|  
-| `TETile[][] getTiles()` | 获取世界状态（用于渲染） |  
-| `void moveAvatar(char direction)` | 移动玩家（wasd） |  
-| `Position getAvatarPos()` | 获取玩家位置（用于存档） |  
-| `void setAvatarPos(Position p)` | 设置玩家位置（用于读档） |  
-  
-## 四、生成流程图  
-  
-```  
-World(seed)  
-    ↓initialize()  
-    ↓fillWithNothing() ─────────→ 全部是 NOTHING    ↓generateRooms()  
-    ├── tryPlaceBigRoom() ──→ 1个大房间（非必须成功）  
-    ├── tryPlaceRooms(80%, NORMAL)    │       └── 最多尝试100次，每次：  
-    │           创建随机正常房间  
-    │           检查合法性（不靠边、不重叠）  
-    │           合法则雕刻，不合法则重试  
-    └── tryPlaceRooms(20%, SMALL)    ↓connectRooms()  
-    └── 对每对相邻房间 (i, i+1)：  
-        计算中心点        随机选择L形方向  
-        carveHorizontal + carveVertical    ↓addWalls()  
-    └── 遍历每个FLOOR的8邻域：  
-        如果是NOTHING则变成WALL  
-    ↓placeAvatar()  
-    └── 在rooms.get(0)的中心放置AVATAR  
-```  
-  
-## 五、关键算法细节  
-  
-### 5.1 重叠检测（含1格间隙）  
-  
-```java  
-// 两个房间之间至少留1格间隙（给墙壁）  
-private boolean overlaps(Room r) {  
-    for (Room other : rooms) {        // 扩展1格后的边界检查  
-        if (r.left() - 1 <= other.right() + 1 &&            r.right() + 1 >= other.left() - 1 &&            r.bottom() - 1 <= other.top() + 1 &&            r.top() + 1 >= other.bottom() - 1) {            return true;        }    }    return false;}  
-```  
-  
-### 5.2 墙壁生成（8邻域）  
-  
-```java  
-private void addWalls() {  
-    for (int x = 1; x < WIDTH - 1; x++) {        for (int y = 1; y < HEIGHT - 1; y++) {            if (tiles[x][y] == Tileset.FLOOR) {                // 检查8个方向  
-                for (int dx = -1; dx <= 1; dx++) {                    for (int dy = -1; dy <= 1; dy++) {                        int nx = x + dx, ny = y + dy;                        if (tiles[nx][ny] == Tileset.NOTHING) {                            tiles[nx][ny] = Tileset.WALL;                        }                    }                }            }        }    }}  
-```  
-  
-### 5.3 玩家移动  
-  
-```java  
-public void moveAvatar(char direction) {  
-    int nx = avatarPos.x;    int ny = avatarPos.y;        switch (direction) {  
-        case 'w': ny++; break;        case 's': ny--; break;        case 'a': nx--; break;        case 'd': nx++; break;        default: return;    }    // 只能移动到FLOOR上  
-    if (tiles[nx][ny] == Tileset.FLOOR) {        tiles[avatarPos.x][avatarPos.y] = Tileset.FLOOR;        avatarPos.x = nx;        avatarPos.y = ny;        tiles[nx][ny] = Tileset.AVATAR;    }}  
-```  
-  
-## 六、测试检查点  
-  
-### 阶段1：基础测试  
-- [ ] 固定种子生成相同世界  
-- [ ] 不同种子生成不同世界  
-- [ ] 世界四周被墙壁包围  
-  
-### 阶段2：房间测试  
-- [ ] 至少生成1个房间  
-- [ ] 房间之间有走廊连接  
-- [ ] 可以走到每个房间  
-  
-### 阶段3：移动测试  
-- [ ] wasd可以移动玩家  
-- [ ] 不能穿墙  
-- [ ] 移动后原位置恢复为地板  
-  
-### 阶段4：保存测试  
-- [ ] 可以保存世界状态  
-- [ ] 可以加载世界状态  
-- [ ] 加载后玩家位置正确  
-  
-## 七、常见问题  
-  
-**Q: 房间生成数量不够 TARGET_ROOM_COUNT 怎么办？**  
-A: 没关系，地图空间可能不够。只要有房间且能连通即可。  
-  
-**Q: 走廊穿墙怎么办？**  
-A: 走廊只覆盖 NOTHING，不覆盖已有的 WALL 或 FLOOR。  
-  
-**Q: 玩家被墙包围出不去？**  
-A: 确保玩家生成在房间中心（FLOOR），且房间有出口连接到走廊。  
-  
-**Q: 世界生成太慢？**  
-A: 检查重叠检测算法，确保没有 O(N²) 以上的复杂度。
+```java
+private static final int WIDTH = 80;
+private static final int HEIGHT = 50;
+private static final int MAX_ATTEMPTS = 100;
+private static final int TARGET_ROOM_COUNT = 25;
+
+// 大房间 1 个
+private static final int BIG_ROOM_MIN_W = 20, BIG_ROOM_MAX_W = 25;
+private static final int BIG_ROOM_MIN_H = 10, BIG_ROOM_MAX_H = 15;
+
+// 正常房间 ~80%
+private static final int NORMAL_ROOM_MIN_W = 5, NORMAL_ROOM_MAX_W = 10;
+private static final int NORMAL_ROOM_MIN_H = 3, NORMAL_ROOM_MAX_H = 8;
+
+// 小房间 ~20%
+private static final int SMALL_ROOM_MIN_W = 3, SMALL_ROOM_MAX_W = 5;
+private static final int SMALL_ROOM_MIN_H = 3, SMALL_ROOM_MAX_H = 5;
+```
+
+### 2.2 实例变量
+
+```java
+private TETile[][] world;
+private List<Room> rooms;
+private Random random;
+private Position avatarPos;
+```
+
+### 2.3 内部类
+
+#### Room
+```java
+class Room {
+    final int x, y, width, height;
+    RoomType roomType;
+
+    int centerX() { return x + width / 2; }
+    int centerY() { return y + height / 2; }
+    int left()   { return x; }
+    int right()  { return x + width - 1; }
+    int bottom() { return y; }
+    int top()    { return y + height - 1; }
+}
+```
+
+#### RoomType
+```java
+private enum RoomType { BIG, NORMAL, SMALL }
+```
+
+#### Position
+```java
+private class Position {
+    int x, y;
+    Position(int x, int y) { this.x = x; this.y = y; }
+}
+```
+
+---
+
+## 三、世界生成流程
+
+```
+World(seed)
+    ↓ fillWithNothing()          → 全填 NOTHING
+    ↓ initialize()
+        ↓ generateRooms()
+            ├── tryPlaceBigRoom()        → 必须成功（while true）
+            ├── tryPlaceRoom(NORMAL, ~20)
+            └── tryPlaceRoom(SMALL, ~5)
+        ↓ connectRooms()             → Kruskal MST + L 型走廊
+        ↓ addWalls()                 → 8 邻域填 WALL
+    ↓ placeAvatar()              → rooms.get(0) 中心放 AVATAR
+```
+
+### 3.1 房间生成
+
+```java
+private void generateRooms() {
+    tryPlaceBigRoom();
+    tryPlaceRoom(RoomType.NORMAL, (int) (TARGET_ROOM_COUNT * 0.8));
+    tryPlaceRoom(RoomType.SMALL, (int) (TARGET_ROOM_COUNT * 0.2));
+}
+```
+
+**合法性检查：** 越界检测 + 重叠检测（含 1 格 buffer）
+
+```java
+private boolean isValidPosition(Room room) {
+    if (room.right() >= WIDTH - 1 || room.top() >= HEIGHT - 1) return false;
+    if (overlaps(room)) return false;
+    return true;
+}
+
+private boolean overlaps(Room room) {
+    for (Room other : rooms) {
+        if (room.left() <= other.right() + 1 &&
+            room.right() >= other.left() - 1 &&
+            room.bottom() <= other.top() + 1 &&
+            room.top() >= other.bottom() - 1) {
+            return true;
+        }
+    }
+    return false;
+}
+```
+
+### 3.2 走廊生成（Kruskal MST）
+
+```java
+private void connectRooms() {
+    EdgeWeightedGraph graph = new EdgeWeightedGraph(rooms.size());
+    for (int i = 0; i < rooms.size(); i++) {
+        for (int j = i + 1; j < rooms.size(); j++) {
+            Room v = rooms.get(i);
+            Room w = rooms.get(j);
+            double dist = Math.abs(v.centerX() - w.centerX())
+                        + Math.abs(v.centerY() - w.centerY());
+            graph.addEdge(new Edge(i, j, dist));
+        }
+    }
+    KruskalMST mst = new KruskalMST(graph);
+    for (Edge edge : mst.edges()) {
+        Room v = rooms.get(edge.either());
+        Room w = rooms.get(edge.other(edge.either()));
+        carveCorridor(v, w);
+    }
+}
+```
+
+**L 型走廊：**
+```java
+private void carveCorridor(Room v, Room w) {
+    int direction = RandomUtils.uniform(random, 2);
+    if (direction == 0) {
+        carveHorizontal(v.centerX(), w.centerX(), v.centerY());
+        carveVertical(v.centerY(), w.centerY(), w.centerX());
+    } else {
+        carveVertical(v.centerY(), w.centerY(), v.centerX());
+        carveHorizontal(v.centerX(), w.centerX(), w.centerY());
+    }
+}
+
+private void carveHorizontal(int x1, int x2, int y) {
+    int start = Math.min(x1, x2);
+    int end = Math.max(x1, x2);
+    for (int i = start; i <= end; i++) world[i][y] = Tileset.FLOOR;
+}
+
+private void carveVertical(int y1, int y2, int x) {
+    int start = Math.min(y1, y2);
+    int end = Math.max(y1, y2);
+    for (int i = start; i <= end; i++) world[x][i] = Tileset.FLOOR;
+}
+```
+
+### 3.3 墙壁生成
+
+遍历每个 `FLOOR`，8 邻域的 `NOTHING` 变成 `WALL`：
+
+```java
+private void addWalls() {
+    for (int i = 1; i < WIDTH; i++) {
+        for (int j = 1; j < HEIGHT; j++) {
+            if (world[i][j] == Tileset.FLOOR) {
+                // 8 方向检查
+                for (int dx = -1; dx <= 1; dx++) {
+                    for (int dy = -1; dy <= 1; dy++) {
+                        int nx = i + dx, ny = j + dy;
+                        if (nx >= 0 && nx < WIDTH && ny >= 0 && ny < HEIGHT
+                            && world[nx][ny] == Tileset.NOTHING) {
+                            world[nx][ny] = Tileset.WALL;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+### 3.4 Avatar 放置
+
+```java
+private void placeAvatar() {
+    Room room = rooms.get(0);  // 大房间
+    avatarPos = new Position(room.centerX(), room.centerY());
+    world[room.centerX()][room.centerY()] = Tileset.AVATAR;
+}
+```
+
+---
+
+## 四、AutograderBuddy
+
+### 4.1 输入解析
+
+```java
+public static TETile[][] getWorldFromInput(String input) {
+    int index = 0;
+    while (true) {
+        if (index == input.length()) return null;
+        char c = Character.toLowerCase(input.charAt(index));
+        index++;
+        if (c == 'n') break;
+    }
+    StringBuilder sb = new StringBuilder();
+    while (true) {
+        if (index == input.length()) return null;
+        char c = Character.toLowerCase(input.charAt(index));
+        index++;
+        if (c != 's') sb.append(c);
+        else break;
+    }
+    String s = sb.toString();
+    if (s.length() == 0) return null;
+    World world = new World(Long.parseLong(s));
+    return world.getWorld();
+}
+```
+
+**约束：**
+- 大小写不敏感
+- **不调用任何渲染方法**
+- `:q` 保存逻辑留到 3B 实现
+
+### 4.2 瓦片判断
+
+```java
+public static boolean isGroundTile(TETile t) {
+    return t.character() == Tileset.FLOOR.character()
+        || t.character() == Tileset.AVATAR.character()
+        || t.character() == Tileset.FLOWER.character();
+}
+
+public static boolean isBoundaryTile(TETile t) {
+    return t.character() == Tileset.WALL.character()
+        || t.character() == Tileset.LOCKED_DOOR.character()
+        || t.character() == Tileset.UNLOCKED_DOOR.character();
+}
+```
+
+---
+
+
+## 五、有限状态机
+### 5.1 StateEnum 枚举类
+```java
+private enum StateEnum { MENU, SEED_INPUT, PLAYING}
+```
+
+### 5.2 GameState 接口
+
+
+## 五、3B 待实现接口
+
+### 5.1 World 中需添加
+
+```java
+public void moveAvatar(char direction)   // WASD 移动，撞墙不动
+public Position getAvatarPos()           // 获取位置
+public void setAvatarPos(Position p)     // 设置位置（加载用）
+```
+
+### 5.2 Main 中需添加
+
+- 主菜单（N / L / Q）
+- 种子输入界面（实时显示数字）
+- 游戏主循环（监听键盘输入）
+- HUD（鼠标悬停显示 tile description，不能闪烁）
+
+### 5.3 保存/加载
+
+- `:Q`（冒号+Q）保存并退出
+- 只能创建 `.txt` 后缀文件
+- `L` 从主菜单加载上次状态
+- **关键：** 保存的不仅是地图和位置，还有 `Random` 的状态（seed + 已调用次数），否则无法保证确定性
+
+---
+
+## 六、关键设计决策
+
+| 决策 | 说明 |
+|------|------|
+| **MST 连走廊** | 保证所有房间连通且无冗余长走廊；用 Kruskal 是因为课程刚教过 |
+| **房间 index 映射为图节点** | `rooms.get(i)` 的 `i` 直接作为 `EdgeWeightedGraph` 的顶点，不改现有 Kruskal 代码 |
+| **AABB 边界框检测** | `overlaps` 用扩展 1 格的边界矩形，而非逐像素遍历 |
+| **8 邻域墙生成** | 走廊和房间统一后处理，不需要单独给走廊/房间分别围墙 |
+| **Avatar 放大房间** | `rooms.get(0)` 是 `tryPlaceBigRoom()` 生成的大房间，逻辑上作为起点最合理 |

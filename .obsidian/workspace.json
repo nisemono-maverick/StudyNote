@@ -4,20 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "454fc12695211493",
+        "id": "d5516e6dd31ea559",
         "type": "tabs",
         "children": [
           {
-            "id": "71d91edf0c642b33",
+            "id": "b4f278181a4ba5c5",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "finance/微观经济学.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "微观经济学"
+            }
+          },
+          {
+            "id": "e7ddfd9fb3acac28",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Claude Code 如何管理记忆：深度技术分析"
+            }
+          },
+          {
+            "id": "8bddb553d3db0c2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "latex-cheatsheet.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "latex-cheatsheet"
+            }
+          },
+          {
+            "id": "e23a8d64a2e0869e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Journal/人生格言.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "人生格言"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -82,7 +133,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "claude",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -118,12 +169,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "csdiy/cs61b/Proj.BYOW/Proj.md",
+                "file": "Journal/人生格言.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Proj 的出链列表"
+              "title": "人生格言 的出链列表"
             }
           },
           {
@@ -132,12 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Journal/人生格言.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "人生格言 的大纲"
             }
           },
           {
@@ -150,8 +202,7 @@
               "title": "Claudian"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "a886ebb5fa7a0bbd",
@@ -200,57 +251,57 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
-      "claudian:Open Claudian": false
+      "claudian:Open Claudian": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "b0740bf193c191d4",
+  "active": "4faf76b4eeb30af4",
   "lastOpenFiles": [
-    "Lacan/拉康精神分析系统性入门学习方案.md",
-    "Lacan/拉康学习执行清单.md",
-    "Lacan/📘 概念笔记.md",
-    "Lacan/❓ 问题笔记.md",
-    "Lacan/🎬 案例笔记.md",
-    "Lacan/✍️ 分析文章.md",
-    "Unix/APUE第1章-UNIX基础知识.md",
-    "未命名.md",
-    "Lacan",
-    "Unix/Unix系统架构概览.md",
-    "Unix/unix_architecture.jpg",
-    "Unix/APUE第2章-UNIX标准及实现.md",
-    "Unix/apue_code/limits2.c",
-    "Unix/apue_code/limits.c",
-    "Unix/apue_code/pathconf.sym",
-    "Unix/apue_code/sysconf.sym",
-    "Unix/apue_code/2.5.4.awk",
-    "Unix/apue_code/a.out",
-    "Unix/apue_code/ch01_ls.c",
-    "Unix/apue_code/myapue.h",
-    "Unix/apue_code",
+    "latex-cheatsheet.md",
+    "Journal/人生格言.md",
+    "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
+    "finance/微观经济学.md",
+    "Journal/情绪日记.md",
+    "anime/gundam_uc_philosophy.md",
     "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
-    "csdiy/cs61b/Proj.BYOW/Proj.md",
     "csdiy/cs61b/Proj.BYOW/Project3 Document.md",
+    "csdiy/cs61b/Proj.BYOW/Proj.md",
+    "Excalidraw/立方和几何解释.excalidraw",
+    "csdiy/cs61b/Proj.BYOW/StdDraw_API.md",
+    "Lacan/🎬 案例笔记.md",
+    "Journal",
+    "Excalidraw/一站式数据资产门户.excalidraw",
+    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
     "csdiy/cs61b/Proj.BYOW/Lab09 Conway's Game of Life.md",
     "csdiy/cs61b/Proj.BYOW/DesignDocument_Template 1.md",
-    "csdiy/cs61b/Proj.BYOW/RandomUtils 文档.md",
-    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
     "csdiy/cs61b/Proj.BYOW/Skeleton.md",
-    "csdiy/cs61b/Proj.BYOW/StdDraw_API.md",
-    "csdiy/cs61b/Lecture/Tree Traversals.md",
-    "csdiy/cs61b/Lecture/Computability.md",
-    "csdiy/cs61b/Lecture/Compression.md",
-    "csdiy/cs61b/Lecture/index.md",
-    "csdiy/cs61b/Proj.BYOW/Tetris.md",
-    "csdiy/cs61b/Lecture/Sort.md",
-    "csdiy/cs61b/未命名.md",
+    "Excalidraw/长短期需求弹性对比.md",
+    "Excalidraw/长短期需求弹性对比.excalidraw.md",
+    "Excalidraw/长短期需求弹性对比.excalidraw",
+    "Excalidraw/长短期需求弹性对比.png",
+    "Excalidraw/长短期需求弹性对比_preview.png",
+    "Excalidraw/需求曲线.md",
+    "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
+    "anime/README.md",
+    "anime",
+    "Excalidraw/完全弹性和完全无弹性需求.md",
+    "Excalidraw/线性需求函数.md",
+    "Excalidraw/需求变动后的新均衡.md",
+    "Excalidraw/供给变动后的新均衡.md",
+    "Excalidraw/供给曲线.md",
+    "attachments/Pasted image 20260405215943.png",
+    "Excalidraw",
+    "finance",
+    "未命名文件夹",
+    "Lacan",
+    "Unix/unix_architecture.jpg",
+    "Unix/apue_code/limits2.c",
     "attachments/Pasted image 20260206155644.png",
     "attachments/Pasted image 20260127152711.png",
     "attachments/Pasted image 20260127152652.png",
     "attachments/Pasted image 20260127151621.png",
     "attachments/Pasted image 20260124155014.png",
     "attachments/Pasted image 20260124154043.png",
-    "attachments/Pasted image 20260124154213.png",
-    "attachments/Pasted image 20260124153801.png",
-    "attachments/Pasted image 20260124153750.png",
     "未命名.canvas"
   ]
 }
