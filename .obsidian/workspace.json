@@ -4,71 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "d5516e6dd31ea559",
+        "id": "7648b491e9c9509f",
         "type": "tabs",
         "children": [
           {
-            "id": "b4f278181a4ba5c5",
+            "id": "b2956a145e1a4e80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "finance/微观经济学.md",
+                "file": "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "微观经济学"
-            }
-          },
-          {
-            "id": "e7ddfd9fb3acac28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Claude Code 如何管理记忆：深度技术分析"
-            }
-          },
-          {
-            "id": "8bddb553d3db0c2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "latex-cheatsheet.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "latex-cheatsheet"
-            }
-          },
-          {
-            "id": "e23a8d64a2e0869e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Journal/人生格言.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "人生格言"
+              "title": "系统学习金融学：从经济学基础到专业深化的完整路径"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Journal/人生格言.md",
+                "file": "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "人生格言 的出链列表"
+              "title": "系统学习金融学：从经济学基础到专业深化的完整路径 的出链列表"
             }
           },
           {
@@ -183,26 +137,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal/人生格言.md",
+                "file": "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "人生格言 的大纲"
-            }
-          },
-          {
-            "id": "3819ed4644c1c26f",
-            "type": "leaf",
-            "state": {
-              "type": "claudian-view",
-              "state": {},
-              "icon": "bot",
-              "title": "Claudian"
+              "title": "系统学习金融学：从经济学基础到专业深化的完整路径 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "a886ebb5fa7a0bbd",
@@ -252,17 +197,23 @@
       "command-palette:打开命令面板": false,
       "obsidian-git:Open Git source control": false,
       "claudian:Open Claudian": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4faf76b4eeb30af4",
+  "active": "b2956a145e1a4e80",
   "lastOpenFiles": [
-    "latex-cheatsheet.md",
-    "Journal/人生格言.md",
-    "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
     "finance/微观经济学.md",
-    "Journal/情绪日记.md",
+    "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
+    "statistics/探索性数据分析/README.md",
+    "statistics/探索性数据分析",
+    "statistics",
+    "anime/README.md",
     "anime/gundam_uc_philosophy.md",
+    "Journal/情绪日记.md",
+    "Journal/人生格言.md",
+    "latex-cheatsheet.md",
+    "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
     "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
     "csdiy/cs61b/Proj.BYOW/Project3 Document.md",
     "csdiy/cs61b/Proj.BYOW/Proj.md",
@@ -281,8 +232,6 @@
     "Excalidraw/长短期需求弹性对比.png",
     "Excalidraw/长短期需求弹性对比_preview.png",
     "Excalidraw/需求曲线.md",
-    "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
-    "anime/README.md",
     "anime",
     "Excalidraw/完全弹性和完全无弹性需求.md",
     "Excalidraw/线性需求函数.md",
@@ -293,9 +242,7 @@
     "Excalidraw",
     "finance",
     "未命名文件夹",
-    "Lacan",
     "Unix/unix_architecture.jpg",
-    "Unix/apue_code/limits2.c",
     "attachments/Pasted image 20260206155644.png",
     "attachments/Pasted image 20260127152711.png",
     "attachments/Pasted image 20260127152652.png",
