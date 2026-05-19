@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b5f71d41b1130980",
+        "id": "bd063f631a1a9ad1",
         "type": "tabs",
         "children": [
           {
-            "id": "a5fdf638a12cc9a6",
+            "id": "49627fe922e86c56",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -79,7 +79,6 @@
       {
         "id": "90e075932855bde2",
         "type": "tabs",
-        "dimension": 56.242568370986916,
         "children": [
           {
             "id": "a40ef328d0c773c0",
@@ -87,7 +86,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "claude",
+                "query": "tag:#text2vec",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -104,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Unix/unix_architecture.jpg",
+                "file": "python,projects,ai/流畅的Python/流畅的Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "unix_architecture 的反向链接列表"
+              "title": "流畅的Python 的反向链接列表"
             }
           },
           {
@@ -123,12 +122,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
+                "file": "PythonDoc/typing库.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "系统学习金融学：从经济学基础到专业深化的完整路径 的出链列表"
+              "title": "typing库 的出链列表"
             }
           },
           {
@@ -137,22 +136,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/自然语言处理实战/分词.md",
+                "file": "csdiy/cs61b/Lecture/index.md",
                 "followCursor": false,
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "分词 的大纲"
+              "title": "index 的大纲"
+            }
+          },
+          {
+            "id": "10b84addcc97abe6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "a886ebb5fa7a0bbd",
         "type": "tabs",
-        "dimension": 43.757431629013084,
         "children": [
           {
             "id": "2bc1d680b9a59137",
@@ -168,23 +176,12 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "b0740bf193c191d4",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 346.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,59 +192,57 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4faf76b4eeb30af4",
+  "active": "10b84addcc97abe6",
   "lastOpenFiles": [
-    "python,projects,ai/自然语言处理实战/code/chapter2.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter2",
-    "python,projects,ai/自然语言处理实战/code",
-    "python,projects,ai/未命名.md",
     "python,projects,ai/自然语言处理实战/分词.md",
+    "python,projects,ai/自然语言处理实战/code/chapter2.ipynb",
+    "python,projects,ai/自然语言处理实战/code",
+    "python,projects,ai/自然语言处理实战/第一章 NLP概述.md",
+    "python,projects,ai/agno/Agno 文档学习.md",
+    "python,projects,ai/agno/Agents.md",
+    "python,projects,ai/fastapi/用 FastAPI 脚手架初始化一个可协作项目.md",
     "python,projects,ai/自然语言处理实战",
-    "mathematics/MIT18.06 Linear Algebra/第一章 向量与矩阵.md",
-    "finance/微观经济学.md",
-    "Excalidraw/价格控制.md",
-    "mathematics/MIT18.06 Linear Algebra",
-    "mathematics",
-    "Excalidraw/价格控制-价格上限.excalidraw.md",
-    "Excalidraw/市场机制.md",
-    "Excalidraw/完全弹性和完全无弹性需求.md",
-    "Excalidraw/线性需求函数.md",
-    "Excalidraw/供给变动后的新均衡.md",
-    "Excalidraw/长短期需求弹性对比.md",
-    "Excalidraw/需求曲线.md",
-    "Excalidraw/需求变动后的新均衡.md",
-    "Excalidraw/价格控制-价格上限.excalidraw",
-    "Excalidraw/价格控制-价格上限.md",
-    "Excalidraw/立方和几何解释.excalidraw",
-    "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
+    "Unix/Unix系统架构概览.md",
+    "Unix/unix_architecture.jpg",
+    "Lacan/拉康精神分析系统性入门学习方案.md",
+    "Lacan/拉康学习执行清单.md",
+    "csdiy/cs61b/Lecture/index.md",
     "statistics/探索性数据分析/README.md",
     "statistics/探索性数据分析",
     "statistics",
-    "anime/README.md",
-    "anime/gundam_uc_philosophy.md",
-    "Journal/情绪日记.md",
-    "Journal/人生格言.md",
-    "latex-cheatsheet.md",
+    "python,projects,ai/langchain/Memory.md",
+    "python,projects,ai/fastapi",
     "python,projects,ai/Claude Code 如何管理记忆：深度技术分析.md",
-    "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
+    "latex-cheatsheet.md",
+    "finance/系统学习金融学：从经济学基础到专业深化的完整路径.md",
+    "finance/微观经济学.md",
+    "finance",
+    "csdiy/cs61b/Proj.BYOW/StdDraw_API.md",
+    "csdiy/cs61b/Proj.BYOW/Skeleton.md",
     "csdiy/cs61b/Proj.BYOW/Project3 Document.md",
+    "csdiy/cs61b/Proj.BYOW/RandomUtils 文档.md",
+    "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
     "csdiy/cs61b/Proj.BYOW/Proj.md",
-    "Journal",
-    "Excalidraw/长短期需求弹性对比.png",
-    "Excalidraw/长短期需求弹性对比_preview.png",
-    "attachments/Pasted image 20260405215943.png",
-    "Unix/unix_architecture.jpg",
-    "attachments/Pasted image 20260206155644.png",
+    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
+    "csdiy/cs61b/Proj.BYOW/Lab09 Conway's Game of Life.md",
+    "csdiy/cs61b/Proj.BYOW/DesignDocument_Template 1.md",
+    "csdiy/cs61b/Proj.BYOW",
+    "csdiy/cs61b/Lecture/Tree Traversals.md",
+    "csdiy/cs61b/Lecture/Sort.md",
     "attachments/Pasted image 20260127152711.png",
-    "attachments/Pasted image 20260127152652.png",
     "attachments/Pasted image 20260127151621.png",
-    "attachments/Pasted image 20260124155014.png",
-    "attachments/Pasted image 20260124154043.png",
+    "attachments/Pasted image 20260124154213.png",
+    "attachments/Pasted image 20260124153801.png",
+    "attachments/Pasted image 20260124153750.png",
+    "attachments/Pasted image 20260117235745.png",
+    "attachments/Pasted image 20260117235738.png",
+    "attachments/Pasted image 20260117234702.png",
+    "attachments/Pasted image 20260112205053.png",
+    "anime",
+    "Unix/apue_code/sysconf.sym",
     "未命名.canvas"
   ]
 }
