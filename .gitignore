@@ -42,3 +42,7 @@ Journal/
 *.swp
 *.swo
 *~
+
+# 编辑器配置
+**/.vscode/
+**/.idea/

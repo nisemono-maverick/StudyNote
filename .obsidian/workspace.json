@@ -11,10 +11,15 @@
             "id": "a5fdf638a12cc9a6",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/自然语言处理实战/分词.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "分词"
             }
           }
         ]
@@ -132,13 +137,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mathematics/MIT18.06 Linear Algebra/第一章 向量与矩阵.md",
+                "file": "python,projects,ai/自然语言处理实战/分词.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "第一章 向量与矩阵 的大纲"
+              "title": "分词 的大纲"
             }
           }
         ],
@@ -197,9 +202,15 @@
   },
   "active": "4faf76b4eeb30af4",
   "lastOpenFiles": [
+    "python,projects,ai/自然语言处理实战/code/chapter2.ipynb",
+    "python,projects,ai/自然语言处理实战/code/chapter2",
+    "python,projects,ai/自然语言处理实战/code",
+    "python,projects,ai/未命名.md",
+    "python,projects,ai/自然语言处理实战/分词.md",
+    "python,projects,ai/自然语言处理实战",
+    "mathematics/MIT18.06 Linear Algebra/第一章 向量与矩阵.md",
     "finance/微观经济学.md",
     "Excalidraw/价格控制.md",
-    "mathematics/MIT18.06 Linear Algebra/第一章 向量与矩阵.md",
     "mathematics/MIT18.06 Linear Algebra",
     "mathematics",
     "Excalidraw/价格控制-价格上限.excalidraw.md",
@@ -226,15 +237,9 @@
     "csdiy/cs61b/Proj.BYOW/Proj3_SPEC.md",
     "csdiy/cs61b/Proj.BYOW/Project3 Document.md",
     "csdiy/cs61b/Proj.BYOW/Proj.md",
-    "csdiy/cs61b/Proj.BYOW/StdDraw_API.md",
-    "Lacan/🎬 案例笔记.md",
     "Journal",
-    "Excalidraw/一站式数据资产门户.excalidraw",
-    "csdiy/cs61b/Proj.BYOW/Lab10 Tetris.md",
-    "Excalidraw/长短期需求弹性对比.excalidraw",
     "Excalidraw/长短期需求弹性对比.png",
     "Excalidraw/长短期需求弹性对比_preview.png",
-    "anime",
     "attachments/Pasted image 20260405215943.png",
     "Unix/unix_architecture.jpg",
     "attachments/Pasted image 20260206155644.png",
