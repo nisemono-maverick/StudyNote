@@ -4,26 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "589df15b740023cd",
+        "id": "bd063f631a1a9ad1",
         "type": "tabs",
         "children": [
           {
-            "id": "d44213967cd135ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "python,projects,ai/自然语言处理实战/分词.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "分词"
-            }
-          },
-          {
-            "id": "3f7e06ed5ecaed63",
+            "id": "dd5fab4280607770",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,6 +20,21 @@
               },
               "icon": "lucide-file",
               "title": "词中的数学"
+            }
+          },
+          {
+            "id": "658d37f96edcde4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/自然语言处理实战/词频背后的语义.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "词频背后的语义"
             }
           }
         ],
@@ -152,13 +152,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/自然语言处理实战/词中的数学.md",
+                "file": "csdiy/cs61b/Lecture/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "词中的数学 的大纲"
+              "title": "index 的大纲"
             }
           },
           {
@@ -201,8 +201,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -213,12 +211,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10b84addcc97abe6",
+  "active": "658d37f96edcde4e",
   "lastOpenFiles": [
-    "python,projects,ai/自然语言处理实战/分词.md",
     "python,projects,ai/自然语言处理实战/词中的数学.md",
-    "2026-05-23.md",
-    "Lacan/拉康学习执行清单.md",
+    "python,projects,ai/自然语言处理实战/词频背后的语义.md",
+    "python,projects,ai/自然语言处理实战/分词.md",
     "python,projects,ai/自然语言处理实战/code/chapter2.ipynb",
     "python,projects,ai/自然语言处理实战/code",
     "python,projects,ai/自然语言处理实战/第一章 NLP概述.md",
@@ -229,6 +226,7 @@
     "Unix/Unix系统架构概览.md",
     "Unix/unix_architecture.jpg",
     "Lacan/拉康精神分析系统性入门学习方案.md",
+    "Lacan/拉康学习执行清单.md",
     "csdiy/cs61b/Lecture/index.md",
     "statistics/探索性数据分析/README.md",
     "statistics/探索性数据分析",
