@@ -1,7 +1,7 @@
 {
   "cssTheme": "Catppuccin",
   "theme": "moonstone",
-  "baseFontSize": 18,
+  "baseFontSize": 19,
   "baseFontSizeAction": true,
   "interfaceFontFamily": "JetBrainsMono Nerd Font",
   "textFontFamily": "JetBrainsMono Nerd Font",
