@@ -53,7 +53,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/自然语言处理实战/第7章-卷积神经网络.md",
+                "file": "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "第7章-卷积神经网络 的大纲"
+              "title": "第6章-词向量推理 的大纲"
             }
           },
           {
@@ -213,7 +213,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 307
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,10 +229,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "23e052e5becce889",
+  "active": "10b84addcc97abe6",
   "lastOpenFiles": [
-    "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
+    "python,projects,ai/自然语言处理实战/code/chapter6.ipynb",
     "python,projects,ai/自然语言处理实战/第7章-卷积神经网络.md",
+    "python,projects,ai/自然语言处理实战/code/chapter7.ipynb",
+    "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
     "python,projects,ai/自然语言处理实战/code/chapter5.ipynb",
     "python,projects,ai/自然语言处理实战/code/chapter5.ipynv",
     "python,projects,ai/自然语言处理实战/第4章-词频背后的语义.md",
@@ -258,7 +260,6 @@
     "philosophy/00-笔记模板.md",
     "philosophy/99-脉络梳理.md",
     "philosophy/README.md",
-    "philosophy/05-现代哲学",
     "2026-05-23.md",
     "Lacan/拉康学习执行清单.md",
     "python,projects,ai/自然语言处理实战/第一章 NLP概述.md",
@@ -268,7 +269,6 @@
     "Unix/unix_architecture.jpg",
     "Lacan/拉康精神分析系统性入门学习方案.md",
     "csdiy/cs61b/Lecture/index.md",
-    "python,projects,ai/langchain/Memory.md",
     "attachments/Pasted image 20260127152711.png",
     "attachments/Pasted image 20260127151621.png",
     "attachments/Pasted image 20260124154213.png",
