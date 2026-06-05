@@ -197,8 +197,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10b84addcc97abe6",
+  "active": "876ea65a63488e96",
   "lastOpenFiles": [
+    "python,projects,ai/尚硅谷NLP/code/data/user_dict.txt",
+    "python,projects,ai/尚硅谷NLP/code/data",
+    "python,projects,ai/尚硅谷NLP/code/chapter3.ipynb",
     "python,projects,ai/🚧 待学习（算法）/LDA.md",
     "python,projects,ai/🚧 待学习（算法）/BPE tokenization 算法.md",
     "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
@@ -226,8 +229,6 @@
     "philosophy/01-古希腊罗马哲学/阿那克西曼德.md",
     "MachineLearning/白板推导系列/Introduction.md",
     "statistics/概率基础",
-    "MachineLearning/白板推导系列",
-    "MachineLearning",
     "philosophy/01-古希腊罗马哲学/泰勒斯.md",
     "philosophy/00-笔记模板.md",
     "philosophy/99-脉络梳理.md",
@@ -239,7 +240,6 @@
     "python,projects,ai/agno/Agents.md",
     "python,projects,ai/fastapi/用 FastAPI 脚手架初始化一个可协作项目.md",
     "Unix/unix_architecture.jpg",
-    "Lacan/拉康精神分析系统性入门学习方案.md",
     "attachments/Pasted image 20260127152711.png",
     "attachments/Pasted image 20260127151621.png",
     "attachments/Pasted image 20260124154213.png",
