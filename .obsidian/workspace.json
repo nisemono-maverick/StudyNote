@@ -21,6 +21,51 @@
               "icon": "lucide-file",
               "title": "第3章 文本表示"
             }
+          },
+          {
+            "id": "239cd190b02f885e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/自然语言处理实战/第3章-词中的数学.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "第3章-词中的数学"
+            }
+          },
+          {
+            "id": "70804de0c4fe41f5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "第6章-词向量推理"
+            }
+          },
+          {
+            "id": "a15a7f33f460a514",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/自然语言处理实战/第2章-分词.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "第2章-分词"
+            }
           }
         ]
       }
@@ -86,7 +131,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:待补充时期",
+                "query": "余弦",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -197,16 +242,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "876ea65a63488e96",
+  "active": "10b84addcc97abe6",
   "lastOpenFiles": [
+    "python,projects,ai/尚硅谷NLP/code/data/my_vectors.kv",
+    "python,projects,ai/尚硅谷NLP/code/my_vectors.kv",
+    "python,projects,ai/尚硅谷NLP/code/data/online_shopping_10_cats.csv",
+    "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
+    "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
+    "python,projects,ai/自然语言处理实战/第3章-词中的数学.md",
+    "python,projects,ai/自然语言处理实战/第2章-分词.md",
+    "python,projects,ai/尚硅谷NLP/code/data/sgns.weibo.word.bz2",
+    "attachments/Pasted image 20260606155015.png",
+    "attachments/Pasted image 20260606155009.png",
+    "attachments/Pasted image 20260606154952.png",
+    "attachments/Pasted image 20260606154241.png",
+    "attachments/Pasted image 20260606154145.png",
+    "attachments/Pasted image 20260606153917.png",
+    "attachments/Pasted image 20260606153849.png",
     "python,projects,ai/尚硅谷NLP/code/data/user_dict.txt",
     "python,projects,ai/尚硅谷NLP/code/data",
     "python,projects,ai/尚硅谷NLP/code/chapter3.ipynb",
     "python,projects,ai/🚧 待学习（算法）/LDA.md",
     "python,projects,ai/🚧 待学习（算法）/BPE tokenization 算法.md",
-    "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
     "python,projects,ai/自然语言处理实战/第7章-卷积神经网络.md",
-    "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
     "python,projects,ai/自然语言处理实战/第4章-词频背后的语义.md",
     "attachments/Pasted image 20260604225218.png",
     "attachments/Pasted image 20260604002130.png",
@@ -215,20 +273,13 @@
     "python,projects,ai/尚硅谷NLP",
     "python,projects,ai/自然语言处理实战/code/chapter6.ipynb",
     "python,projects,ai/自然语言处理实战/code/chapter7.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter5.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter5.ipynv",
     "python,projects,ai/自然语言处理实战/第5章-神经网络初步.md",
-    "python,projects,ai/自然语言处理实战/code/word2vec_tsne.png",
-    "python,projects,ai/自然语言处理实战/code/word2vec_from_scratch.py",
-    "python,projects,ai/自然语言处理实战/第2章-分词.md",
-    "python,projects,ai/自然语言处理实战/第3章-词中的数学.md",
     "statistics/概率基础/线性回归-最小二乘MLE与正则化.md",
     "statistics/概率基础/频率派与贝叶斯派及高斯分布MLE.md",
     "Unix/Unix系统架构概览.md",
     "statistics/探索性数据分析/README.md",
     "philosophy/01-古希腊罗马哲学/阿那克西曼德.md",
     "MachineLearning/白板推导系列/Introduction.md",
-    "statistics/概率基础",
     "philosophy/01-古希腊罗马哲学/泰勒斯.md",
     "philosophy/00-笔记模板.md",
     "philosophy/99-脉络梳理.md",
@@ -239,12 +290,6 @@
     "python,projects,ai/agno/Agno 文档学习.md",
     "python,projects,ai/agno/Agents.md",
     "python,projects,ai/fastapi/用 FastAPI 脚手架初始化一个可协作项目.md",
-    "Unix/unix_architecture.jpg",
-    "attachments/Pasted image 20260127152711.png",
-    "attachments/Pasted image 20260127151621.png",
-    "attachments/Pasted image 20260124154213.png",
-    "attachments/Pasted image 20260124153801.png",
-    "attachments/Pasted image 20260124153750.png",
     "未命名.canvas"
   ]
 }
