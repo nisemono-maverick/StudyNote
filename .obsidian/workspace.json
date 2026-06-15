@@ -36,9 +36,21 @@
               "icon": "lucide-file",
               "title": "python数据分析"
             }
+          },
+          {
+            "id": "5471125ddc9ffa2d",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "attachments/Pasted image 20260611223238.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20260611223238"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -119,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
+                "file": "attachments/Pasted image 20260611223238.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +141,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "python数据分析 的反向链接列表"
+              "title": "Pasted image 20260611223238 的反向链接列表"
             }
           },
           {
@@ -138,12 +150,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
+                "file": "attachments/Pasted image 20260611223238.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "python数据分析 的出链列表"
+              "title": "Pasted image 20260611223238 的出链列表"
             }
           },
           {
@@ -152,13 +164,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
+                "file": "attachments/Pasted image 20260611223238.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "python数据分析 的大纲"
+              "title": "Pasted image 20260611223238 的大纲"
             }
           },
           {
@@ -213,10 +225,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10b84addcc97abe6",
+  "active": "5471125ddc9ffa2d",
   "lastOpenFiles": [
-    "python,projects,ai/尚硅谷python数据分析/0.43, 0.89], [0.21, 0.57.md",
     "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
+    "attachments/Pasted image 20260611223238.png",
+    "python,projects,ai/尚硅谷python数据分析/0.43, 0.89], [0.21, 0.57.md",
     "python,projects,ai/尚硅谷python数据分析/1, 3], [2, 4.md",
     "python,projects,ai/尚硅谷python数据分析/未命名.md",
     "python,projects,ai/尚硅谷NLP/第4章 传统序列模型.md",
@@ -241,7 +254,6 @@
     "python,projects,ai/尚硅谷NLP/code/data/sgns.weibo.word.bz2",
     "attachments/Pasted image 20260606155015.png",
     "attachments/Pasted image 20260606155009.png",
-    "attachments/Pasted image 20260606154952.png",
     "python,projects,ai/尚硅谷NLP/code/data/user_dict.txt",
     "python,projects,ai/尚硅谷NLP/code/data",
     "python,projects,ai/尚硅谷NLP/code/chapter3.ipynb",
@@ -260,7 +272,6 @@
     "philosophy/01-古希腊罗马哲学/泰勒斯.md",
     "philosophy/00-笔记模板.md",
     "philosophy/99-脉络梳理.md",
-    "philosophy/README.md",
     "未命名.canvas"
   ]
 }
