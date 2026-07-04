@@ -21,8 +21,39 @@
               "icon": "lucide-file",
               "title": "python数据分析"
             }
+          },
+          {
+            "id": "86b83edaa47f1124",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "第3章 文本表示"
+            }
+          },
+          {
+            "id": "00d0e7abe9ad530e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python,projects,ai/尚硅谷NLP/第4章 传统序列模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "第4章 传统序列模型"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +117,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:待补充时期",
+                "query": "n-gram",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -136,13 +167,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
+                "file": "待整理/andrej-karpathy-skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "python数据分析 的大纲"
+              "title": "andrej-karpathy-skills 的大纲"
             }
           },
           {
@@ -199,16 +230,24 @@
   },
   "active": "10b84addcc97abe6",
   "lastOpenFiles": [
+    "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
+    "python,projects,ai/数据挖掘/Apriori算法.md",
+    "待整理/andrej-karpathy-skills.md",
+    "待整理/Apriori算法.md",
+    "python,projects,ai/数据挖掘",
+    "python,projects,ai/自然语言处理实战/第2章-分词.md",
+    "latex-cheatsheet.md",
+    "philosophy/01-古希腊罗马哲学/阿那克西曼德.md",
+    "待整理",
+    "python,projects,ai/尚硅谷NLP/第4章 传统序列模型.md",
+    "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
     "标签方案_第三部分.pptx",
     "标签方案_备份.pptx",
     "attachments/Pasted image 20260611223238.png",
     "python,projects,ai/🚧 待学习（算法）/BPE tokenization 算法.md",
-    "python,projects,ai/尚硅谷python数据分析/python数据分析.md",
     "python,projects,ai/尚硅谷python数据分析",
     "python,projects,ai/尚硅谷NLP/code/chapter4.ipynb",
     "python,projects,ai/尚硅谷NLP/code/chapter3.ipynb",
-    "python,projects,ai/尚硅谷NLP/第4章 传统序列模型.md",
-    "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
     "python,projects,ai/尚硅谷NLP/code",
     "python,projects,ai/尚硅谷NLP",
     "attachments/Pasted image 20260609220516.png",
@@ -224,27 +263,19 @@
     "python,projects,ai/自然语言处理实战/第4章-词频背后的语义.md",
     "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
     "python,projects,ai/自然语言处理实战/code/chapter6.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter7.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter5.ipynb",
-    "python,projects,ai/自然语言处理实战/code/chapter5.ipynv",
     "python,projects,ai/自然语言处理实战/第5章-神经网络初步.md",
-    "python,projects,ai/自然语言处理实战/第2章-分词.md",
     "python,projects,ai/自然语言处理实战/第3章-词中的数学.md",
     "python,projects,ai/🚧 待学习（算法）/LDA.md",
     "statistics/概率基础/线性回归-最小二乘MLE与正则化.md",
     "statistics/概率基础/频率派与贝叶斯派及高斯分布MLE.md",
     "Unix/Unix系统架构概览.md",
     "statistics/探索性数据分析/README.md",
-    "philosophy/01-古希腊罗马哲学/阿那克西曼德.md",
     "MachineLearning/白板推导系列/Introduction.md",
     "philosophy/01-古希腊罗马哲学/泰勒斯.md",
     "philosophy/00-笔记模板.md",
     "philosophy/99-脉络梳理.md",
     "philosophy/README.md",
     "2026-05-23.md",
-    "Lacan/拉康学习执行清单.md",
-    "python,projects,ai/自然语言处理实战/第一章 NLP概述.md",
-    "python,projects,ai/agno/Agno 文档学习.md",
     "未命名.canvas"
   ]
 }
