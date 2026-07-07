@@ -3,6 +3,8 @@ from dataset import get_dataloader
 from model import InputMethodModel
 import config
 from tqdm import tqdm
+from torch.utils.tensorboard import SummaryWriter
+import time
 
 def train():
     # 1. 确定设备
@@ -19,13 +21,25 @@ def train():
     model = InputMethodModel(vocab_size=len(vocab_list)).to(device)
     loss_fn = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=config.LEARNING_RATE)
-    # writer = torch.utils.tensorboard.SummaryWriter()
+    writer = SummaryWriter(log_dir=config.LOGS_DIR / time.strftime("%Y-%m-%d_%H:%M:%S"))
 
     # 5. 训练
+    best_loss = float('inf')
     for epoch in range(1, 1 + config.EPOCHS):
         print("="*10, f"Epoch: {epoch}", "="*10)
         loss = train_one_epoch(model, dataloader, loss_fn, optimizer, device)
         print(f"loss: {loss}")
+
+        # 记录训练结果
+        writer.add_scalar('loss', loss, epoch)
+
+        # 保存模型
+        if loss < best_loss:
+            best_loss = loss
+            torch.save(model.state_dict(), config.MODELS_DIR / 'best.pth')
+            
+
+    writer.close()
 
 
 def train_one_epoch(model:InputMethodModel, dataloader, loss_fn, optimizer, device):

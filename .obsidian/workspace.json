@@ -68,18 +68,18 @@
             }
           },
           {
-            "id": "09cbe55002039233",
+            "id": "663ba5ab8e63f90b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "python,projects,ai/PytorchDoc/TensorBoard.md",
+                "file": "python,projects,ai/PytorchDoc/TensorBoard教程.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "TensorBoard"
+              "title": "TensorBoard教程"
             }
           }
         ],
@@ -131,7 +131,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5026054382324
+    "width": 266.5026054382324,
+    "collapsed": true
   },
   "right": {
     "id": "df7c7a838a0ea4e4",
@@ -258,11 +259,22 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10b84addcc97abe6",
+  "active": "663ba5ab8e63f90b",
   "lastOpenFiles": [
+    "python,projects,ai/尚硅谷NLP/code/input_method/src/predict.py",
     "python,projects,ai/尚硅谷NLP/第4章 传统序列模型.md",
-    "python,projects,ai/PytorchDoc/TensorBoard.md",
-    "python,projects,ai/PytorchDoc",
+    "python,projects,ai/尚硅谷NLP/code/input_method/logs/events.out.tfevents.1783414781.maverickdeMacBook-Air.local.52766.0",
+    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/model.cpython-311.pyc",
+    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/config.cpython-311.pyc",
+    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/dataset.cpython-311.pyc",
+    "python,projects,ai/尚硅谷NLP/code/logs/scalar_demo/events.out.tfevents.1783411063.maverickdeMacBook-Air.local.41390.0",
+    "python,projects,ai/尚硅谷NLP/code/logs/scalar_demo/events.out.tfevents.1783411050.maverickdeMacBook-Air.local.41216.0",
+    "python,projects,ai/PytorchDoc/TensorBoard教程.md",
+    "csdiy/未命名.md",
+    "csdiy/软考软件设计师",
+    "python,projects,ai/尚硅谷NLP/code/logs/scalar_demo/events.out.tfevents.1783350343.maverickdeMacBook-Air.local.35716.0",
+    "python,projects,ai/尚硅谷NLP/code/logs/scalar_demo",
+    "python,projects,ai/尚硅谷NLP/code/logs/events.out.tfevents.1783350089.maverickdeMacBook-Air.local.34474.0",
     "python,projects,ai/ollama/Ollama 快速入门笔记.md",
     "python,projects,ai/ollama/Ollama 文档学习.md",
     "python,projects,ai/ollama/Ollama Capabilities.md",
@@ -270,15 +282,6 @@
     "python,projects,ai/流畅的Python/流畅的Python.md",
     "python,projects,ai/流畅的Python/一摞python风格的纸牌.md",
     "python,projects,ai/🚧 待学习（算法）/BPE tokenization 算法.md",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/model.cpython-312.pyc",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/dataset.cpython-312.pyc",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/train.py",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/model.py",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/dataset.py",
-    "python,projects,ai/尚硅谷NLP/code/input_method/data/processed/test.jsonl",
-    "python,projects,ai/尚硅谷NLP/code/input_method/data/processed/train.jsonl",
-    "python,projects,ai/尚硅谷NLP/code/input_method/models/vocab.txt",
-    "python,projects,ai/尚硅谷NLP/code/input_method/src/__pycache__/config.cpython-312.pyc",
     "PythonDoc/pandas读取和写入json文件.md",
     "python,projects,ai/尚硅谷NLP/第3章 文本表示.md",
     "python,projects,ai/尚硅谷NLP/pandas.md",
@@ -304,8 +307,6 @@
     "python,projects,ai/自然语言处理实战/第6章-词向量推理.md",
     "python,projects,ai/自然语言处理实战/第5章-神经网络初步.md",
     "python,projects,ai/自然语言处理实战/第3章-词中的数学.md",
-    "python,projects,ai/🚧 待学习（算法）/LDA.md",
-    "statistics/概率基础/线性回归-最小二乘MLE与正则化.md",
     "未命名.canvas"
   ]
 }
